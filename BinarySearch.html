@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+                    <a class="navbar-brand" href="index.html">
+                            <div class="svg-wrapper">
+                                        <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                                          <rect class="shape" height="60" width="320" />
+                                        </svg>
+                                         <div class="text">ALGOVIS</div>
+                                      </div>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="Algorithms.html">Algorithms</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link " href="Community.html">Community</a>
+                        </li>
+                      </ul>
+                      <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                      </form>
+                    </div>
+                  </nav><br><br>
+
+
+    <div id="anim">
+            <h3 class="h3" style="margin-left:5%;">Binary Search</h3><br>
+            <p class="p" style="margin-left: 5%">Binary search,also known as half-interval search, logarithmic search, or binary chop,is a search algorithm that finds the position of a target value within a sorted array.[4][5] Binary search compares the target value to the middle element of the array. If they are not equal, the half in which the target cannot lie is eliminated and the search continues on the remaining half, again taking the middle element to compare to the target value, and repeating this until the target value is found. If the search ends with the remaining half being empty, the target is not in the array. Even though the idea is simple, implementing binary search correctly requires attention to some subtleties about its exit conditions and midpoint calculation.
+
+                    Binary search runs in logarithmic time in the worst case, making O(log n) comparisons, where n is the number of elements in the array, the O is Big O notation, and log is the logarithm. Binary search takes constant (O(1)) space, meaning that the space taken by the algorithm is the same for any number of elements in the array.Binary search is faster than linear search except for small arrays, but the array must be sorted first. Although specialized data structures designed for fast searching, such as hash tables, can be searched more efficiently, binary search applies to a wider range of problems.</p><br><br>
+            <h4 class="h4" align="center" style="font-size:18px;">Binary Search Visualization</h4><br>
+
+            <div align="center">
+                    <table class="table array_1d" rules="all" id="array_1d" >
+                    <tr>
+                    <th>A[0]</th>
+                    <th>A[1]</th>
+                    <th>A[2]</th>
+                    <th>A[3]</th>
+                    <th>A[4]</th>
+                    <th>A[5]</th>
+                    <th>A[6]</th>
+                    <th>A[7]</th>
+                    <th>A[8]</th>
+                    <th>A[9]</th>
+                    <th>A[10]</th>
+                    </tr>
+                    <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    </tr>
+                    <tr class="description">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    </tr>
+                    </table>
+                </div>
+
+                <div align="center"><!----controls-->
+                        <p class="p" id="key" style="font-size:20px;"></p>
+                        <br>
+                        <label style="font-size:15px;">Enter value to search : </label>
+                        <input type="number" placeholder="search key" id="key_val" style="height:22px;"> &nbsp;
+                        <button class="search_button" onclick="search()"><span>search </span></button>
+                        <br><br>
+                        <input class="control_buttons refresh" type="button" value="refresh" onclick="refresh()"></input> &nbsp;&nbsp;
+                        <input class="control_buttons reset" type="button" value="reset" onclick="reset()"></input> &nbsp; &nbsp;
+          
+                </div><br>
+
+                <div> <!----console-->
+                    <div id="details">
+                            <div id="console">
+                            <p id="log" style="color:white; font-family:Yanone Kaffeesatz;"></p><br>
+                            <p id="output" style="color:yellow; font-family:Yanone Kaffeesatz;"></p>
+                            </div>
+                            <div id="trace">
+                              <fieldset>
+                                <legend>Trace</legend>
+                                <ul type="none">
+                                <li id="line1">procedure binary_search (list, value)</li>
+                                <li id="line2">&nbsp;while low < = high</li>
+                                <li id="line3"> &nbsp; &nbsp;mid = (low + high) / 2</li>
+                                <li id="line4">  &nbsp; &nbsp; &nbsp;&nbsp; if (A[mid] < value)</li>
+                                <li id="line5"> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;low = mid + 1</li>
+                                <li id="line6">  &nbsp; &nbsp; &nbsp;&nbsp; else if (A[mid] > value)</li>
+                                <li id="line7"> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;high = mid - 1</li>
+                                <li id="line8">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;else</li>
+                                <li id="line9">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; retrun mid</li>
+                                <li id="line10">&nbsp;end while</li>
+                                <li id="line11">end porcedure</li>
+                                </ul>
+                               </fieldset>
+                           </div>
+                            </div>
+                            <br><br>
+                 </div>
+
+                </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/binarysearch.js"></script>
+    </body>
+</html>

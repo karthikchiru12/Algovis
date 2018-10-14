@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+                    <a class="navbar-brand" href="index.html">
+                            <div class="svg-wrapper">
+                                        <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+                                          <rect class="shape" height="60" width="320" />
+                                        </svg>
+                                         <div class="text">ALGOVIS</div>
+                                      </div>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="Algorithms.html">Algorithms</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link " href="Community.html">Community</a>
+                        </li>
+                      </ul>
+                      <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                      </form>
+                    </div>
+                  </nav><br><br>
+
+
+    <div id="anim">
+            <h3 class="h3" style="margin-left:5%;">Linear Search</h3><br>
+            <p class="p" style="margin-left: 5%">Linear search is a very basic and simple search algorithm.<br>In Linear search, we search an element or value in a given array by traversing the array from the starting,
+                till the desired element or value is found.<br>
+                For example, consider an array of integers of size N
+                You should find and print the position of all the elements with value. 
+                Here, the linear search is based on the idea of matching each element from the beginning of the list to the end of the list with the integer 
+                and then printing the position of the element if the condition is `True'.</p><br><br>
+            <h4 class="h4" align="center" style="font-size:18px;">Linear Search Visualization</h4><br>
+
+            <div align="center">
+                    <table class="table array_1d" rules="all" id="array_1d" >
+                    <tr>
+                    <th>A[0]</th>
+                    <th>A[1]</th>
+                    <th>A[2]</th>
+                    <th>A[3]</th>
+                    <th>A[4]</th>
+                    <th>A[5]</th>
+                    <th>A[6]</th>
+                    <th>A[7]</th>
+                    <th>A[8]</th>
+                    <th>A[9]</th>
+                    <th>A[10]</th>
+                    </tr>
+                    <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    </tr>
+                    <tr class="description">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    </tr>
+                    </table>
+                </div>
+
+                <div align="center"><!----controls-->
+                        <p class="p" id="key" style="font-size:20px;"></p>
+                        <br>
+                        <label style="font-size:15px;">Enter value to search : </label>
+                        <input type="number" placeholder="search key" id="key_val" style="height:22px;"> &nbsp;
+                        <button class="search_button" onclick="search()"><span>search </span></button>
+                        <br><br>
+                        <input class="control_buttons refresh" type="button" value="refresh" onclick="refresh()"></input> &nbsp;&nbsp;
+                        <input class="control_buttons reset" type="button" value="reset" onclick="reset()"></input> &nbsp; &nbsp;
+          
+                </div><br>
+
+                <div> <!----console-->
+                    <div id="details">
+                            <div id="console">
+                            <p id="log" style="color:white; font-family:Yanone Kaffeesatz;"></p><br>
+                            <p id="output" style="color:yellow; font-family:Yanone Kaffeesatz;"></p>
+                            </div>
+                            <div id="trace">
+                              <fieldset>
+                                <legend>Trace</legend>
+                                <ul type="none">
+                                <li id="line1">procedure linear_search (list, value)</li>
+                                <li id="line2">&nbsp;while i < n</li>
+                                <li id="line3"> &nbsp; &nbsp; &nbsp;if match item == value</li>
+                                <li id="line4">  &nbsp; &nbsp; &nbsp;&nbsp;return the item's location</li>
+                                <li id="line5"> &nbsp; &nbsp; &nbsp;i++</li>
+                                <li id="line6">end while</li>
+                                <li id="line7">end procedure</li>
+                                </ul>
+                                </fieldset>
+                           </div>
+                            </div>
+                            <br><br>
+                 </div>
+
+                </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/Source js/linearsearch.js"></script>
+    </body>
+</html>

@@ -1,0 +1,295 @@
+@media (max-width: 576px) { .navmargin { margin: 0; } }
+@media (min-width: 1025px)
+ {
+   .navbar
+{
+  height:75px;
+  width: 100%;
+  flex-direction: row;
+	justify-content: space-between;
+}
+}
+.intro
+{
+  text-align:center; 
+  color:white; 
+  font-family: 'Electrolize', sans-serif; 
+  font-size:20px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align:center;
+}
+
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing: border-box;
+}
+body{
+  height: 100%;
+  width: 100%;
+  background-color:#333; 
+}
+
+/*hover animation by Sean McCaffery*/
+.shape {
+  fill: transparent;
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  stroke:#bc122c;
+}
+
+.text {
+  color:white;
+  font-family: 'Roboto Condensed';
+  font-size: 22px;
+  letter-spacing: 8px;
+  line-height: 32px;
+  position: relative;
+  top: -48px;
+  margin-left:80px;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+  }
+}
+
+.svg-wrapper:hover .shape {
+  -webkit-animation: 0.5s draw linear forwards;
+  animation: 0.5s draw linear forwards;
+
+
+}
+
+/*hover animation by Sean McCaffery*/
+
+/*array styling*/
+.description
+{
+	border-color:#333;
+	color:white;
+}
+.array_1d
+{
+
+	color:white;
+	border:1px solid white; 
+	border-collapse: collapse;
+	text-align:center;
+	width:90%;
+	height:20%;
+		
+}
+/*array styling*/
+
+
+/* refresh and reset control buttons styling*/
+.control_buttons
+{
+	  background-color:#bc122c;
+    border: none;
+    color: white;
+    padding: 6px 24px;
+    text-align: center;
+    font-size: 15px;
+	  cursor:pointer;
+	  border-radius: 15px;
+}
+.reset:hover{background-color:maroon;}
+.refresh:hover{background-color: maroon;}
+
+/* refresh and reset control buttons styling*/
+
+
+
+/* Searh button styling*/
+.search_button
+{
+	  background-color:#333;
+    border:1px solid #bc122c;
+    color: white;
+    padding: 3px 15px;
+    text-align: center;
+    font-size: 15px;
+	  cursor:pointer;
+  	transition: all 0.5s;
+  	margin: 5px;
+    width:100px;
+	
+}
+.search_button:hover {
+	  border:1px solid #bc122c;
+    background-color:#bc122c;
+    color: white;
+	  border-radius: 15px;
+}
+
+.search_button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.search_button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.search_button:hover span {
+  padding-right: 25px;
+}
+
+.search_button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* Searh button styling*/
+
+
+#anim
+{
+	color:white;
+	margin-left:20px;
+	
+}
+#search
+{
+	
+}
+
+/*The tracing and details and log part styling*/
+#console
+{
+	font-size:15px;
+  font-family:Open Sans Condensed;
+  width: 50%;
+  margin-left: 4%;
+}
+#trace
+{
+  width: 50%;
+  margin-left: 30%;
+}
+#details
+{
+  display: flex;
+}
+/*The tracing and details and log part styling*/
+
+@media screen and (max-width: 600px) {
+  .nav_bar a:not(:first-child) {display: none;}
+  .nav_bar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+.sort_button
+{
+	background-color:#333;
+    border:1px solid #bc122c;
+    color: white;
+    padding: 3px 15px;
+    text-align: center;
+    font-size: 16px;
+	cursor:pointer;
+	transition: all 0.5s;
+	margin: 5px;
+    width:100px;
+	font-family:Oswald;
+	
+}
+.sort_button:hover {
+	border:1px solid #bc122c;
+    background-color:#bc122c;
+    color: white;
+	border-radius: 15px;
+}
+
+.sort_button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.sort_button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.sort_button:hover span {
+  padding-right: 25px;
+}
+
+.sort_button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.ext
+{
+	border-color:#333;
+	color:white;
+}
+.box {
+  background: black;
+  background-clip: content-box;
+  width: 500px;
+  height: 300px;
+  margin: 20px auto;
+  padding: 20px 0;
+  position: relative;
+  
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 500px;
+    top: 20px;
+    bottom: 20px;
+    left: 0;
+    right: 0px;
+    background: #ddd;
+    z-index: -1;
+    transform: rotate(5deg);
+  }
+}
+
+#top
+{
+  color:white;
+	border:1px solid white; 
+	border-collapse: collapse;
+  text-align:center;
+  width:3%;
+  height:6%;
+  
+}
+.push:hover
+{
+  background-color: maroon;
+}
+.pop:hover
+{
+  background-color: maroon;
+}
