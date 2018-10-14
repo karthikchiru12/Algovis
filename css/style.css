@@ -8,9 +8,6 @@
   flex-direction: row;
 	justify-content: space-between;
 }
-table th {
-  width: auto !important;
-}
 }
 .intro
 {
