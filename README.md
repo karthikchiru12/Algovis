@@ -18,4 +18,8 @@ Download the zip and extract it. <br>
 Run the index.html and you are good to go without any other requirements.<br>
 Feel free to experiment and change a line of code here and there and see what changes happen. <br>
 
+#### Issues
+1. If the animation is stuck or not starting, then clear the cache of the browser and restart the browser.
+2. Even then if it does not work then try using a different browser.
+
 You can see the visualizations we had developed at   https://karthikchiru12.github.io/Algovis/
