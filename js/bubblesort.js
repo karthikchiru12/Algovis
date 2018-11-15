@@ -53,6 +53,7 @@ function reset()
      document.getElementById('swap').innerHTML="";
      document.getElementById('swap_count').innerHTML="";
      document.getElementById('comp').innerHTML="";
+	 document.getElementById('line7').style.backgroundColor="";
      for(var temp=0;temp<11;temp++)
      {
       arr.rows[1].cells[temp].style.backgroundColor="";
@@ -87,7 +88,7 @@ function play_asc()
  
 
   
-  var id = setInterval(anm,500);//we repeat anim() function for every 2500ms until clearInterval(id) is called//
+  var id = setInterval(anm,100);//we repeat anim() function for every 2500ms until clearInterval(id) is called//
   function anm()
   {
    
@@ -276,8 +277,12 @@ function play_asc()
 	  arr.rows[r].cells[j].style.backgroundColor="";
 	  finish=1;
 	  status="done";
+	  document.getElementById('line3').style.backgroundColor="";
+	  document.getElementById('line4').style.backgroundColor="";
+	  document.getElementById('line7').style.backgroundColor="green";
 	  sort=1;
 	  document.getElementById('sort').style.visibility="visible";
+	  
 	  clearInterval(id);
 	}
   }
@@ -288,15 +293,28 @@ function refresh()
 {
  if((finish==0&&status!="pl")||(finish==1&&status=="done"))
  {
-  sort=0;
-  pass=0;
-  swap=0;
-  swap_count=0;
-  comp=0;
+  c=0;
+     msg="";
+     finish=0;
+     left=0;
+     right=0;
+     check=1;
+     step1="enter";
+	 step2="";
+	 step3="";
+     pass=0;
+	 swap=0;
+	 next=0;
+	 pc=0;
+	 swap_count=0;
+	 temp=0;
+	 sort=0;
+	 comp=0;
   document.getElementById('pass').innerHTML="";
   document.getElementById('swap').innerHTML="";
   document.getElementById('comp').innerHTML="";
   document.getElementById('swap_count').innerHTML="";
+  document.getElementById('line7').style.backgroundColor="";
   for(var i=0;i<col_len;i++)
   {
    x=Math.floor((Math.random() * 100) + 1);//random value is generated between 0 and 1 *100 +1//
