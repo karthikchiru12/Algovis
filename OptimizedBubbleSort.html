@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-    <head><title>AlgoVis : Bubble_Sort</title>
+    <head><title>AlgoVis : Optimized_Bubble_sort</title>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
@@ -46,9 +46,9 @@
 
 
     <div id="anim">
-            <h3 class="h3" style="margin-left:5%;">Bubble Sort</h3><br>
-            <p class="p" style="margin-left: 5%">Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order. The pass through the list is repeated until no swaps are needed, which indicates that the list is sorted. The algorithm, which is a comparison sort, is named for the way smaller or larger elements "bubble" to the top of the list. Although the algorithm is simple, it is too slow and impractical for most problems even when compared to insertion sort.[2] Bubble sort can be practical if the input is in mostly sorted order with some out-of-order elements nearly in position</p><br><br>
-            <h4 class="h4" align="center" style="font-size:18px;">Bubble Sort Visualization</h4><br>
+            <h3 class="h3" style="margin-left:5%;">Optimized Bubble Sort</h3><br>
+            <p class="p" style="margin-left: 5%">The bubble sort algorithm can be easily optimized by observing that the n-th pass finds the n-th largest element and puts it into its final place. So, the inner loop can avoid looking at the last n − 1 items when running for the n-th time.</p><br><br>
+            <h4 class="h4" align="center" style="font-size:18px;">Optimized Bubble Sort Visualization</h4><br>
 
             <div align="center">
                     <table class="table array_1d" rules="all" id="array_1d" >
@@ -120,14 +120,15 @@
                               <fieldset>
                                 <legend>Trace</legend>
                                 <ul type="none">
-                                <li id="line1">procedure bubble_sort (list)</li>
-                                <li id="line2">&nbsp;for all elements in list</li>
+                                <li id="line1">procedure optimized_bubble_sort (list [n])</li>
+                                <li id="line2">&nbsp;for all elements in list of size [n]</li>
                                 <li id="line3"> &nbsp; &nbsp;if list[i] > list[i+1]</li>
                                 <li id="line4">  &nbsp; &nbsp; &nbsp;&nbsp;swap(list[i], list[i+1])</li>
-                                <li id="line5"> &nbsp;&nbsp;&nbsp;end if</li>
-                                <li id="line6">  &nbsp;end for</li>
-                                <li id="line7"> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return list</li>
-                                <li id="line8">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;end BubbleSort</li>
+                                <li id="line5"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n=n-1</li>
+                                <li id="line6"> &nbsp;&nbsp;&nbsp;end if</li>
+                                <li id="line7">  &nbsp;end for</li>
+                                <li id="line8"> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return list</li>
+                                <li id="line9">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;end BubbleSort</li>
                                 </ul>
                                </fieldset>
                            </div>
@@ -141,6 +142,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="js/bubblesort.js"></script>
+    <script src="js/optimizedbubblesort.js"></script>
     </body>
 </html>
