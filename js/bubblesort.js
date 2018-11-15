@@ -88,7 +88,7 @@ function play_asc()
  
 
   
-  var id = setInterval(anm,1000);//we repeat anim() function for every 2500ms until clearInterval(id) is called//
+  var id = setInterval(anm,500);//we repeat anim() function for every 2500ms until clearInterval(id) is called//
   function anm()
   {
    
