@@ -333,3 +333,22 @@ body{
 
 }
 /*end of footer*/
+
+
+/*merge sort css*/
+
+.array1d
+{
+    border: 1px solid white;
+  	color:white;
+	  border-collapse: collapse;
+    text-align:center;
+		
+}
+.noborder
+{
+    border-color:#333;
+    color:white;
+    text-align: center;
+}
+/*merge sort css*/
