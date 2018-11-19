@@ -25,6 +25,6 @@ Feel free to experiment and change a line of code here and there and see what ch
 2. Even then if it does not work then try using a different browser.
 
 <h5>NOTE :</h5> <p><b> All visualizations are tested in chrome desktop browser. All visualizations work perfectly in chrome browser.
-Other browsers show some issues and are not displaying all visualizations correctly.<b></p>
+Other browsers show some issues and are not displaying all visualizations correctly.</b></p>
 
 You can see the visualizations we had developed at   https://karthikchiru12.github.io/Algovis/
