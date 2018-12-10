@@ -53,7 +53,7 @@ var row1=document.getElementById('row1');
              {
                for(i=0;i<=mid;i++)
                {
-                 row1.rows[1].cells[i].style.backgroundColor="black";
+                 row1.rows[1].cells[i].style.backgroundColor="maroon";
                }
              }
              ,2000);
@@ -82,7 +82,7 @@ var row1=document.getElementById('row1');
             {
               for(i=mid+1;i<=last;i++)
                {
-                 row1.rows[1].cells[i].style.backgroundColor="black";
+                 row1.rows[1].cells[i].style.backgroundColor="maroon";
                }
             }
             ,4000);
@@ -124,7 +124,7 @@ var row1=document.getElementById('row1');
          
               for(i=0;i<=mid;i++)
               {
-               row21.rows[0].cells[i].style.backgroundColor="black";
+               row21.rows[0].cells[i].style.backgroundColor="maroon";
               }
             }
             ,6000);
@@ -156,7 +156,7 @@ var row1=document.getElementById('row1');
               
               for(i=mid+1;i<=last;i++)
               {
-                row21.rows[0].cells[i].style.backgroundColor="black";
+                row21.rows[0].cells[i].style.backgroundColor="maroon";
               }
             }
             ,8000);
@@ -197,7 +197,7 @@ var row1=document.getElementById('row1');
          
               for(i=0;i<=mid;i++)
               {
-                row22.rows[0].cells[i].style.backgroundColor="black";
+                row22.rows[0].cells[i].style.backgroundColor="maroon";
               }
             }
             ,10000);
@@ -229,7 +229,7 @@ var row1=document.getElementById('row1');
          
               for(i=mid+1;i<=4;i++)
               {
-                row22.rows[0].cells[i].style.backgroundColor="black";
+                row22.rows[0].cells[i].style.backgroundColor="maroon";
               }
             }
             ,12000);
@@ -276,7 +276,7 @@ var row1=document.getElementById('row1');
                 temp=Number(row31.rows[0].cells[i].innerHTML);
                 row41.rows[0].cells[i].style.visibility="visible";
                 row41.rows[0].cells[i].innerHTML=temp;
-                row31.rows[0].cells[i].style.backgroundColor="black";
+                row31.rows[0].cells[i].style.backgroundColor="maroon";
          
               }
               
@@ -296,7 +296,7 @@ var row1=document.getElementById('row1');
          
               for(i=mid+1,j=0;i<=2,j<=0;i++)
               {
-                row31.rows[0].cells[i].style.backgroundColor="black";
+                row31.rows[0].cells[i].style.backgroundColor="maroon";
                 temp=Number(row31.rows[0].cells[i].innerHTML);
                 row42.rows[0].cells[j].style.visibility="visible";
                 row42.rows[0].cells[j].innerHTML=temp;
@@ -319,12 +319,12 @@ var row1=document.getElementById('row1');
               row31.rows[1].cells[last].innerHTML="";
          
               temp=Number(row32.rows[0].cells[0].innerHTML);
-              row32.rows[0].cells[0].style.backgroundColor="black";
+              row32.rows[0].cells[0].style.backgroundColor="maroon";
               row43.rows[0].cells[0].style.visibility="visible";
               row43.rows[0].cells[0].innerHTML=temp;
          
               temp=Number(row32.rows[0].cells[1].innerHTML);
-              row32.rows[0].cells[1].style.backgroundColor="black";
+              row32.rows[0].cells[1].style.backgroundColor="maroon";
               row44.rows[0].cells[0].innerHTML=temp;
               row44.rows[0].cells[0].style.visibility="visible";
             }
@@ -367,7 +367,7 @@ var row1=document.getElementById('row1');
          
              for(i=0;i<=mid;i++)
              {
-               row33.rows[0].cells[i].style.backgroundColor="black";
+               row33.rows[0].cells[i].style.backgroundColor="maroon";
                temp=Number(row33.rows[0].cells[i].innerHTML);
                row45.rows[0].cells[i].style.visibility="visible";     
                row45.rows[0].cells[i].innerHTML=temp;  
@@ -394,7 +394,7 @@ var row1=document.getElementById('row1');
          
              for(i=mid+1;i<=2;i++)
              {
-               row33.rows[0].cells[i].style.backgroundColor="black"; 
+               row33.rows[0].cells[i].style.backgroundColor="maroon"; 
              }
 
              for(i=mid+1,j=0;i<=2,j<=0;i++)
@@ -434,8 +434,8 @@ var row1=document.getElementById('row1');
          
             function()
             {
-             row34.rows[0].cells[0].style.backgroundColor="black";
-             row34.rows[0].cells[1].style.backgroundColor="black";
+             row34.rows[0].cells[0].style.backgroundColor="maroon";
+             row34.rows[0].cells[1].style.backgroundColor="maroon";
             }
          
          
