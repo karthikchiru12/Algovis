@@ -24,7 +24,7 @@ Feel free to experiment and change a line of code here and there and see what ch
 1. If the animation is stuck or not starting, then clear the cache of the browser and restart the browser.
 2. Even then if it does not work then try using a different browser.
 
-<h5>NOTE :</h5> <p><b> All visualizations are tested in chrome desktop browser. All visualizations work perfectly in chrome browser.
+<h5>NOTE :</h5> <p><b> All visualizations are tested in browsers that use chromium engine. All visualizations work perfectly in the chromium based browsers.
 Other browsers show some issues and are not displaying all visualizations correctly.</b></p>
 
 You can see the visualizations we had developed at   https://karthikchiru12.github.io/Algovis/
