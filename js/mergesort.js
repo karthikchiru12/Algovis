@@ -44,6 +44,7 @@ var res;
             row1.rows[2].cells[last].innerHTML="last";
             row1.rows[1].cells[mid].style.backgroundColor="red";
             row1.rows[2].cells[mid].innerHTML="mid";
+            document.getElementById('phase').innerHTML="DIVIDING THE ARRAY";
          
            }
            ,1000);
@@ -466,6 +467,7 @@ var res;
            var step24=setTimeout(
              function()
              {
+              document.getElementById('phase').innerHTML="SORTING AND MERGING";
               row41.rows[0].cells[0].style.backgroundColor="blue";
               row41.rows[0].cells[1].style.backgroundColor="blue";
              for(i=0;i<2;i++)
