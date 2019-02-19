@@ -27,4 +27,4 @@ Feel free to experiment and change a line of code here and there and see what ch
 <h5>NOTE :</h5> <p><b> All visualizations are tested in browsers that use chromium engine. All visualizations work perfectly in the chromium based browsers.
 Other browsers show some issues and are not displaying all visualizations correctly.</b></p>
 
-You can see the visualizations we had developed at   https://karthikchiru12.github.io/Algovis/
+You can see the visualizations we had developed at   https://chiranjeevikarthik.me/Algovis/
