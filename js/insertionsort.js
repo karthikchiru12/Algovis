@@ -188,7 +188,7 @@ function play_asc()
 		 }
 		
 		
-			arr.rows[2].cells[j-1].innerHTML=Number(arr.rows[2].cells[j].innerHTML);
+			
 			arr.rows[r].cells[j].innerHTML=Number(arr.rows[r].cells[j-1].innerHTML);
 			arr.rows[2].cells[j].innerHTML="";
 			arr.rows[r].cells[j].style.backgroundColor="";
