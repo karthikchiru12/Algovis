@@ -171,8 +171,8 @@ function play_asc()
 		document.getElementById('line3').style.backgroundColor="";
 		document.getElementById('line4').style.backgroundColor="red";
 		document.getElementById('swap').innerHTML="";
-	  msg="swapped :"+left+" & "+right+" ;";
-		document.getElementById('swap').innerHTML=msg;
+	  //msg="swapped :"+left+" & "+right+" ;";
+		//document.getElementById('swap').innerHTML=msg;
 		temp=left;
 	  left=right;
 	  right=temp;
@@ -188,7 +188,7 @@ function play_asc()
 		 }
 		
 		
-			
+			arr.rows[2].cells[j-1].innerHTML=Number(arr.rows[2].cells[j].innerHTML);
 			arr.rows[r].cells[j].innerHTML=Number(arr.rows[r].cells[j-1].innerHTML);
 			arr.rows[2].cells[j].innerHTML="";
 			arr.rows[r].cells[j].style.backgroundColor="";
@@ -212,6 +212,11 @@ function play_asc()
 	 }
 	 if(step1=="enter")
 	 {
+		msg="";
+	  document.getElementById('comp').innerHTML="";
+	  msg="No of comparisions : "+comp;
+	  document.getElementById('comp').innerHTML=msg;
+	  msg="";
 		document.getElementById('sort').style.visibility="hidden";
 		if(j<=10)
 		arr.rows[r].cells[j].style.backgroundColor="green";
@@ -254,6 +259,7 @@ function play_asc()
 	 document.getElementById('line4').style.backgroundColor="";
 	 left=Number(arr.rows[r].cells[i].innerHTML);
 	 right=Number(arr.rows[r].cells[j].innerHTML);
+	 comp++;
 	 if(left>right)
 	 {
 		
@@ -262,7 +268,6 @@ function play_asc()
 		arr.rows[r].cells[i].style.backgroundColor="red";
 		arr.rows[r].cells[j].style.backgroundColor="black";
 		arr.rows[r].cells[j].innerHTML="";
-		comp++;
 		step2="complete";
 		swap=j-i;
 		
