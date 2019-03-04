@@ -14,8 +14,8 @@ We have developed Algorithm visualizations for below Algorithms currently: <br>
 3. Bubble sort
 4. Optimized Bubble sort
 5. Merge sort 
-6.Insertion sort 
-7.K Means Clustering
+6. Insertion sort 
+7. K Means Clustering
 
 You can download the code from Algovis git repository: https://github.com/karthikchiru12/Algovis <br>
 Download the zip and extract it. <br>
