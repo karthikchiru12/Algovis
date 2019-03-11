@@ -14,6 +14,7 @@ var n=11;
 var step1="enter";
 var step2="";
 var step3="";
+var step4="";
 var left,right;
 var s;
 var next=0;
@@ -42,6 +43,7 @@ function reset()
      step1="enter";
 	 step2="";
 	 step3="";
+	 step4=""
      pass=0;
 	 swap=0;
 	 next=0;
@@ -110,7 +112,7 @@ function play_asc()
 	 
 	}
     status="pl";
-    if(pass<10)
+    if(k<=10)
 	{
 	
 	 
@@ -130,7 +132,7 @@ function play_asc()
 	  next=0;
 	  document.get
 		step1="enter"; 
-		for(var n=i;i<j+1;n++)
+		for(var n=i;n<j;n++)
 		{
 			arr.rows[r].cells[n].style.backgroundColor="";
 		}
@@ -138,8 +140,9 @@ function play_asc()
 	  document.getElementById('comp').innerHTML="";
 	  msg="No of comparisions : "+comp;
 	  document.getElementById('comp').innerHTML=msg;
-	  msg="";
-	  if(j>=10)
+		msg="";
+		document.getElementById('swap_count').innerHTML="Number of swaps : "+swap_count;
+	  if(j<=10)
 	  {
 	  step1="";
 	  pc=1;
@@ -147,13 +150,30 @@ function play_asc()
 	  
 	 
 	 }
-	 if(swap==1)
+	 if(pc==1)
 	 {
+	  document.getElementById('line3').style.backgroundColor="";
+	  document.getElementById('line4').style.backgroundColor="";
+	  arr.rows[r].cells[i].style.backgroundColor="";
+	  arr.rows[r].cells[j].style.backgroundColor="";
+	  arr.rows[2].cells[i].innerHTML="";
+	  arr.rows[2].cells[j].innerHTML="";
+	  left=0;
+	  right=0;
+	  temp=0;
+	  i=0;
+	  next=0;
+	  swap=0;
+	  pc=0;
+	  step1="enter";
+	 }
+	 if(swap==1)
+	 {swap_count++;
 		document.getElementById('line3').style.backgroundColor="";
 		document.getElementById('line4').style.backgroundColor="red";
 		document.getElementById('swap').innerHTML="";
-	  msg="swapped :"+left+" & "+right+" ;";
-		document.getElementById('swap').innerHTML=msg;
+	  //msg="swapped :"+left+" & "+right+" ;";
+		//document.getElementById('swap').innerHTML=msg;
 		temp=left;
 	  left=right;
 	  right=temp;
@@ -161,17 +181,30 @@ function play_asc()
 	  arr.rows[r].cells[i].innerHTML=left;
 		arr.rows[r].cells[j].innerHTML=right;
 		swap=0;
-	  next=1;
+		next=1;
+		document.getElementById('swap_count').innerHTML="Number of swaps : "+swap_count;
 	 }
 	 else if(swap>1){
+		 swap_count++;
+		 for(var n=i;n<=j;n++){
+			arr.rows[r].cells[n].style.backgroundColor="#FF0000";
+		 }
 		
-		{
-			arr.rows[2].cells[j-1].innerHTML=Number(arr.rows[2].cells[j].innerHTML);
+		 document.getElementById('swap_count').innerHTML="Number of swaps : "+swap_count;
 			arr.rows[r].cells[j].innerHTML=Number(arr.rows[r].cells[j-1].innerHTML);
 			arr.rows[2].cells[j].innerHTML="";
+			arr.rows[r].cells[j].style.backgroundColor="";
+			arr.rows[r].cells[j-1].style.backgroundColor="black";
+			arr.rows[r].cells[j-1].innerHTML="";
 			j--;
+			if(i+1==j)
+			{
+				step4="enter";
+			}
+			else{
 			swap=j-i;
-		}
+			}
+		
 	 }
 	
 	 if(step1=="complete")
@@ -181,12 +214,40 @@ function play_asc()
 	 }
 	 if(step1=="enter")
 	 {
+		msg="";
+	  document.getElementById('comp').innerHTML="";
+	  msg="No of comparisions : "+comp;
+	  document.getElementById('comp').innerHTML=msg;
+		msg="";
+		document.getElementById('swap_count').innerHTML="Number of swaps : "+swap_count;
 		document.getElementById('sort').style.visibility="hidden";
-	  arr.rows[r].cells[j].style.backgroundColor="green";
-	  arr.rows[r].cells[i].style.backgroundColor="red";
-	  step1="complete";
+		if(j<=10)
+		arr.rows[r].cells[j].style.backgroundColor="green";
+		/*alert(i)
+		*/
+		arr.rows[r].cells[i].style.backgroundColor="red";
+		
+		step1="complete";
+		if(i==n&&j>n)
+	  {
+	   pc=1;
+	   step3="";
+	   step1="";
+	   step2="";
+	  }
 	 }
-	 
+	 if(step2=="abort")
+	 {arr.rows[r].cells[i].style.backgroundColor="";
+		 i++;
+		 if(i==j){
+			 step2="";
+			 next=1;
+		 }
+	 else{
+	step2="";
+	step1="enter";
+	 }
+	}
 	 
 	 
 	 
@@ -201,6 +262,7 @@ function play_asc()
 	 document.getElementById('line4').style.backgroundColor="";
 	 left=Number(arr.rows[r].cells[i].innerHTML);
 	 right=Number(arr.rows[r].cells[j].innerHTML);
+	 comp++;
 	 if(left>right)
 	 {
 		
@@ -209,28 +271,20 @@ function play_asc()
 		arr.rows[r].cells[i].style.backgroundColor="red";
 		arr.rows[r].cells[j].style.backgroundColor="black";
 		arr.rows[r].cells[j].innerHTML="";
-		comp++;
 		step2="complete";
 		swap=j-i;
 		
 	}
-	else{step2="abort";
+	else{
+		step2="abort";
 
 	}
 	 
 	 }
-	 if(step2=="abort")
-	 {arr.rows[r].cells[i].style.backgroundColor="";
-		 i++;
-		 if(i==j){
-			 next=1;
-		 }
-	 else{
-	step2="";
-	step1="enter";
-	 }
-	}
+	 
 	if(step4=="enter"){
+		step4="";
+		swap=1;
 
 	}
 	 
@@ -252,9 +306,21 @@ function play_asc()
 	 
 	}
 	
-	if(j==11)
+	if(k==11)
 	{
+	
+	
+	  arr.rows[r].cells[i].style.backgroundColor="";
+	  finish=1;
+	  status="done";
+	  document.getElementById('line3').style.backgroundColor="";
+	  document.getElementById('line4').style.backgroundColor="";
+	  document.getElementById('line7').style.backgroundColor="green";
+	  sort=1;
+	  document.getElementById('sort').style.visibility="visible";
 	  
+	  clearInterval(id);
+	
 	}
   }
   }
@@ -281,6 +347,9 @@ function refresh()
 	 temp=0;
 	 sort=0;
 	 comp=0;
+	 k=1;
+	 j=k;
+	 i=0;
   document.getElementById('pass').innerHTML="";
   document.getElementById('swap').innerHTML="";
   document.getElementById('comp').innerHTML="";
