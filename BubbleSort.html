@@ -137,6 +137,50 @@
 
                 </div>
 
+                <br></br>
+
+                <div>
+                  <p style="font-size:24px;color:yellow; margin-left:80px;">Bubble Sort Code in C:</p>
+                   <pre>
+                      <code style="color:white;">
+                        #include &lt;stdio.h&gt;
+ 
+                          int main()
+                          {
+                            int array[100], n, c, d, swap;
+                           
+                            printf("Enter number of elements\n");
+                            scanf("%d", &n);
+                           
+                            printf("Enter %d integers\n", n);
+                           
+                            for (c = 0; c < n; c++)
+                              scanf("%d", &array[c]);
+                           
+                            for (c = 0 ; c < n - 1; c++)
+                            {
+                              for (d = 0 ; d < n - c - 1; d++)
+                              {
+                                if (array[d] > array[d+1]) /* For decreasing order use < */
+                                {
+                                  swap       = array[d];
+                                  array[d]   = array[d+1];
+                                  array[d+1] = swap;
+                                }
+                              }
+                            }
+                           
+                            printf("Sorted list in ascending order:\n");
+                           
+                            for (c = 0; c < n; c++)
+                               printf("%d\n", array[c]);
+                           
+                            return 0;
+                          }
+                      </code>
+                   </pre>
+                </div>
+
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

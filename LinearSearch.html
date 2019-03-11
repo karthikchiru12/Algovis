@@ -137,6 +137,47 @@
 
                 </div>
 
+
+                <br></br>
+
+                <div>
+                  <p style="font-size:24px;color:yellow; margin-left:80px;">Linear Search Code in C:</p>
+                   <pre>
+                      <code style="color:white;">
+                        #include &lt;stdio.h&gt;
+ 
+                          int main()
+                          {
+                            int array[100], search, c, n;
+                           
+                            printf("Enter number of elements in array\n");
+                            scanf("%d", &n);
+                           
+                            printf("Enter %d integer(s)\n", n);
+                           
+                            for (c = 0; c < n; c++)
+                              scanf("%d", &array[c]);
+                           
+                            printf("Enter a number to search\n");
+                            scanf("%d", &search);
+                           
+                            for (c = 0; c < n; c++)
+                            {
+                              if (array[c] == search)    /* If required element is found */
+                              {
+                                printf("%d is present at location %d.\n", search, c+1);
+                                break;
+                              }
+                            }
+                            if (c == n)
+                              printf("%d isn't present in the array.\n", search);
+                           
+                            return 0;
+                          }
+                      </code>
+                   </pre>
+                </div>
+
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
