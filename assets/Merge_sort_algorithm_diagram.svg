@@ -23,6 +23,7 @@
 <text text-anchor="middle" x="323" y="27">82</text>
 <polyline style="fill:none;stroke:black;" points="339,40 339,4 "/>
 <text text-anchor="middle" x="354" y="27">10</text>
+<text x="394" y="27" font-family="sans-serif" font-size="10px" fill="white">Original Array</text>
 </g>
 <!-- s10 -->
 <g id="node3" class="node"><title>s10</title>
@@ -219,6 +220,7 @@
 <!-- s23&#45;&gt;s36 -->
 <g id="edge26" class="edge"><title>s23-&gt;s36</title>
 <path style="fill:none;stroke:red;" d="M450,184C452,192 454,201 456,210"/>
+<text x="458" y="270" font-family="sans-serif" font-size="10px" fill="white">Divided</text>
 <polygon style="fill:red;stroke:red;" points="459,209 459,220 453,211 459,209"/>
 </g>
 <!-- s43 -->
@@ -287,6 +289,7 @@
 <text text-anchor="middle" x="323" y="459">43</text>
 <polyline style="fill:none;stroke:black;" points="339,472 339,436 "/>
 <text text-anchor="middle" x="354" y="459">82</text>
+<text x="384" y="459" font-family="sans-serif" font-size="10px" fill="white">Sorted</text>
 </g>
 <!-- s50&#45;&gt;s60 -->
 <g id="edge50" class="edge"><title>s50-&gt;s60</title>
