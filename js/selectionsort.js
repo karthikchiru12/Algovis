@@ -41,7 +41,7 @@ var finish=0;
 var swap_count=0;
 var sort=0;
 var comp=0;
-var a=new Array();
+var a={};
 var min=0;
 var min_index=0;
 
@@ -56,18 +56,18 @@ function reset()
      msg="";
      finish=0;
      findmin="enter";
-	 process="";
-	 exchange="";
-	 swap=0;
+	   process="";
+	   exchange="";
+	   swap=0;
      min=0;
-	 swap_count=0;
-	 temp=0;
-	 sort=0;
-	 comp=0;
+	   swap_count=0;
+	   temp=0;
+	   sort=0;
+	   comp=0;
      document.getElementById('swap').innerHTML="";
      document.getElementById('swap_count').innerHTML="";
      document.getElementById('comp').innerHTML="";
-	 document.getElementById('line7').style.backgroundColor="";
+	   document.getElementById('line7').style.backgroundColor="";
      for(var temp=0;temp<11;temp++)
      {
       arr.rows[1].cells[temp].style.backgroundColor="";
@@ -127,29 +127,6 @@ function play_asc()
             
         }
 
-
-        if(step1=="enter")
-        {
-            for(p=0;p<=n;p++)
-            {
-              try
-              {
-                s=Number(arr.rows[r].cells[p].innerHTML);
-                a[p]=s;
-              }
-              catch(e)
-              {
-                  console.log(e);
-              }
-            }
-
-            min=Number(Math.min.apply(null,a));
-            console.log(min);
-            min_index=a.indexOf(min);
-            console.log(min_index);
-            clearInterval(id);
-        }
-        
 
         
 
