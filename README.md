@@ -32,6 +32,6 @@ Other browsers show some issues and are not displaying all visualizations correc
 
 You can see the visualizations we had developed at   https://chiranjeevikarthik.me/Algovis/
 
-### Update:
+##### Update:
 <br>
 Several Cheatsheets for various CS subjects are added.
