@@ -1,6 +1,8 @@
 # Algovis
 <br>
-<br>
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/karthikchiru12/Algovis/blob/master/LICENSE)
+
 Algovis, An Experiment to visualize the algorithms imitating the conventional classroom approach.<br>
 Which are dynamic in a way that enables any novice student to understand the algorithms effectively.
 <br>
@@ -25,7 +27,11 @@ Feel free to experiment and change a line of code here and there and see what ch
 1. If the animation is stuck or not starting, then clear the cache of the browser and restart the browser.
 2. Even then if it does not work then try using a different browser.
 
-<h5>NOTE :</h5> <p><b> All visualizations are tested in browsers that use chromium engine. All visualizations work perfectly in the chromium based browsers.
+<h5>NOTE :</h5> <p><b> 
+  
+[![Woks-On: Chromium-Based-browsers](https://img.shields.io/badge/Works--On-Chromium--Based--Browsers-green.svg)](https://github.com/karthikchiru12/Algovis/blob/master/LICENSE)
+<br>
+All visualizations are tested in browsers that use chromium engine. All visualizations work perfectly in the chromium based browsers.
 Other browsers show some issues and are not displaying all visualizations correctly.</b></p>
 
 You can see the visualizations we had developed at   https://chiranjeevikarthik.me/Algovis/
