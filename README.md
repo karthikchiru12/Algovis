@@ -1,12 +1,11 @@
 # Algovis
 <br>
-Algovis, a simple way of learning algorithms through visualizations.
-I believe that every student, regardless of his learning capability can easily
-grasp various things when they are visually taught.
-I am presently working to create various visualizations.
-Once I'm successful, then im are going to extend this learning platform even further 
-by making a system that can visualize many possible programs under a language.<br>
-That's all for now.!
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+<br>
+Algovis, An Experiment to visualize the algorithms imitating the conventional classroom approach.<br>
+Which are dynamic in a way that enables any novice student to understand the algorithms effectively.
+<br>
+<br>
 
 We have developed Algorithm visualizations for below Algorithms currently: <br>
 1. Linear search
@@ -32,6 +31,5 @@ Other browsers show some issues and are not displaying all visualizations correc
 
 You can see the visualizations we had developed at   https://chiranjeevikarthik.me/Algovis/
 
-##### Update:
-<br>
+#### Update:
 Several Cheatsheets for various CS subjects are added.
