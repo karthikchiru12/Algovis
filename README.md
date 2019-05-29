@@ -3,12 +3,12 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/karthikchiru12/Algovis/blob/master/LICENSE)
 
-Algovis, An Experiment to visualize the algorithms imitating the conventional classroom approach.<br>
-Which are dynamic in a way that enables any novice student to understand the algorithms effectively.
+Algovis, An Experiment to visualize the algorithms imitating the conventional classroom teaching approach.<br>
+Visualizations are dynamic in a way that enables any novice student to understand the algorithms effectively.
 <br>
 <br>
 
-We have developed Algorithm visualizations for below Algorithms currently: <br>
+Algorithm visualizations currently available: <br>
 1. Linear search
 2. Binary search
 3. Bubble sort
