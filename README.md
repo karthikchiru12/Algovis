@@ -29,7 +29,7 @@ Feel free to experiment and change a line of code here and there and see what ch
 
 <h5>NOTE :</h5> <p><b> 
   
-[![Woks-On: Chromium-Based-browsers](https://img.shields.io/badge/Works--On-Chromium--Based--Browsers-green.svg)](https://github.com/karthikchiru12/Algovis/blob/master/LICENSE)
+[![Woks-On: Chromium-Based-browsers](https://img.shields.io/badge/Works--On-Chromium--Based--Browsers-green.svg)]
 <br>
 All visualizations are tested in browsers that use chromium engine. All visualizations work perfectly in the chromium based browsers.
 Other browsers show some issues and are not displaying all visualizations correctly.</b></p>
