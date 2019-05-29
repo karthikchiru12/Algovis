@@ -18,7 +18,7 @@ Algorithm visualizations currently available: <br>
 7. Selection sort (Under Development)
 8. K Means Clustering
 
-You can download the code from Algovis git repository: https://github.com/karthikchiru12/Algovis <br>
+You can download the code from Algovis github repository: https://github.com/karthikchiru12/Algovis <br>
 Download the zip and extract it.<br>
 Run the index.html and you are good to go without any other requirements.<br>
 Feel free to experiment and change a line of code here and there and see what changes happen. <br>
@@ -34,7 +34,7 @@ Feel free to experiment and change a line of code here and there and see what ch
 All visualizations are tested in browsers that use chromium engine. All visualizations work perfectly in the chromium based browsers.
 Other browsers show some issues and are not displaying all visualizations correctly.</b></p>
 
-You can see the visualizations we had developed at   https://chiranjeevikarthik.me/Algovis/
+You can see the visualizations at   https://chiranjeevikarthik.me/Algovis/
 
 #### Update:
 Several Cheatsheets for various CS subjects are added.
