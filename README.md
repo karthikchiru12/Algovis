@@ -1,6 +1,5 @@
 # Algovis
 <br>
-[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
 <br>
 Algovis, An Experiment to visualize the algorithms imitating the conventional classroom approach.<br>
 Which are dynamic in a way that enables any novice student to understand the algorithms effectively.
