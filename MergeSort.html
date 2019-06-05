@@ -10,7 +10,7 @@
 
     </head>
     <body onload="st()">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <nav class="navbar navbar-expand-lg navbar-dark bg" style="background-color: black;">
                     <a class="navbar-brand" href="index.html">
                             <div class="svg-wrapper">
                                         <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
@@ -38,47 +38,43 @@
                           <a class="nav-link " href="About.html">About</a>
                         </li>
                       </ul>
-                      <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                      </form>
                     </div>
                   </nav><br>
 
 
-    <div id="anim">
+    <div class="container-fluid" id="anim">
             <h3 class="h3" style="margin-left:5%;">Merge Sort</h3><br>
             <p class="p" style="margin-left: 5%">Merge sort is an efficient, general-purpose, comparison-based sorting algorithm. Most implementations produce a stable sort, which means that the order of equal elements is the same in the input and output.Merge sort is a divide and conquer algorithm.</p><br><br>
             <h4 class="h4" align="center" style="font-size:18px;">Merge Sort Visualization</h4><br>
             <p id="phase" align="center" style="color:antiquewhite;"></p>
             <div id="anim" align="center">
-                <table id="row1" class="array1d"  style="width:50%;" border="1" rules="all">
+                <table id="row1" class="table"  style="width:50%;">
                    <thead>
                       <tr>
-                         <th>A[0]</th>
-                         <th>A[1]</th>
-                         <th>A[2]</th>
-                         <th>A[3]</th>
-                         <th>A[4]</th>
-                         <th>A[5]</th>
-                         <th>A[6]</th>
-                         <th>A[7]</th>
-                         <th>A[8]</th>
-                         <th>A[9]</th>
+                         <th class="array1d">A[0]</th>
+                         <th class="array1d">A[1]</th>
+                         <th class="array1d">A[2]</th>
+                         <th class="array1d">A[3]</th>
+                         <th class="array1d">A[4]</th>
+                         <th class="array1d">A[5]</th>
+                         <th class="array1d">A[6]</th>
+                         <th class="array1d">A[7]</th>
+                         <th class="array1d">A[8]</th>
+                         <th class="array1d">A[9]</th>
                       </tr>
                    </thead>
                    <tbody>
                       <tr>
-                         <td>30</td>
-                         <td>20</td>
-                         <td>10</td>
-                         <td>6</td>
-                         <td>2</td>
-                         <td>90</td>
-                         <td>6</td>
-                         <td>23</td>
-                         <td>45</td>
-                         <td>12</td>
+                         <td class="array1d">30</td>
+                         <td class="array1d">20</td>
+                         <td class="array1d">10</td>
+                         <td class="array1d">6</td>
+                         <td class="array1d">2</td>
+                         <td class="array1d">90</td>
+                         <td class="array1d">6</td>
+                         <td class="array1d">23</td>
+                         <td class="array1d">45</td>
+                         <td class="array1d">12</td>
                       </tr>
                       <tr class="noborder">
                          <td></td>
@@ -95,14 +91,14 @@
                 </table>
                 <br></br>
                 <div class="row" id="row2" style="margin-left:30%;">
-                   <table id="row2-1" class="array1d"  style="width:20%;" border="1" rules="all">
+                   <table id="row2-1" class="table"  style="width:20%;">
                       <tbody>
                          <tr style="visibility:hidden;">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td class="array1d"></td>
+                            <td class="array1d"></td>
+                            <td class="array1d"></td>
+                            <td class="array1d"></td>
+                            <td class="array1d"></td>
                          </tr>
                          <tr style="visibility:hidden;" class="noborder">
                             <td></td>
@@ -116,14 +112,14 @@
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                   <table id="row2-2" class="array1d"  style="width:20%;" border="1" rules="all">
+                   <table id="row2-2" class="table"  style="width:20%;">
                       <tbody>
                          <tr style="visibility:hidden;">
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td class="array1d"></td>
+                            <td class="array1d"></td>
+                            <td class="array1d"></td>
+                            <td class="array1d"></td>
+                            <td class="array1d"></td>
                          </tr>
                          <tr style="visibility:hidden;" class="noborder">
                             <td></td>
@@ -137,12 +133,12 @@
                 </div>
                 <br></br>
                 <div class="row" id="row3" style="margin-left:20%;">
-                   <table id="row3-1" class="array1d"  style="width:10%;" border="1" rules="all">
+                   <table id="row3-1" class="table"  style="width:10%;">
                       <tbody>
                          <tr style="visibility:hidden;">
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td class="array1d"></td>
+                            <td class="array1d"></td>
+                            <td class="array1d"></td>
                          </tr>
                          <tr style="visibility:hidden;" class="noborder">
                             <td></td>
@@ -153,11 +149,11 @@
                    </table>
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                   <table id="row3-2" class="array1d"  style="width:10%;" border="1" rules="all">
+                   <table id="row3-2" class="table"  style="width:10%;">
                       <tbody>
                          <tr style="visibility:hidden;">
-                            <td></td>
-                            <td></td>
+                            <td class="array1d"></td>
+                            <td class="array1d"></td>
                          </tr>
                          <tr style="visibility:hidden;" class="noborder">
                             <td></td>
@@ -167,12 +163,12 @@
                    </table>
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                   <table id="row3-3" class="array1d"  style="width:10%;" border="1" rules="all">
+                   <table id="row3-3" class="table"  style="width:10%;">
                       <tbody>
                          <tr style="visibility:hidden;">
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td class="array1d"></td>
+                            <td class="array1d"></td>
+                            <td class="array1d"></td>
                          </tr>
                          <tr style="visibility:hidden;" class="noborder">
                             <td></td>
@@ -183,11 +179,11 @@
                    </table>
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                   <table id="row3-4" class="array1d"  style="width:10%;" border="1" rules="all">
+                   <table id="row3-4" class="table"  style="width:10%;">
                       <tbody>
                          <tr style="visibility:hidden;">
-                            <td></td>
-                            <td></td>
+                            <td class="array1d"></td>
+                            <td class="array1d"></td>
                          </tr>
                          <tr style="visibility:hidden;" class="noborder">
                             <td></td>
@@ -198,11 +194,11 @@
                 </div>
                 <br></br>
                 <div class="row" id="row4" style="margin-left:18%;">
-                   <table id="row4-1" class="array1d"  style="width:5%;" border="1" rules="all">
+                   <table id="row4-1" class="table"  style="width:5%;"">
                       <tbody>
                          <tr style="visibility:hidden;">
-                            <td></td>
-                            <td></td>
+                            <td class="array1d"></td>
+                            <td class="array1d"></td>
                          </tr>
                          <tr style="visibility:hidden;"  class="noborder">
                             <td></td>
@@ -211,10 +207,10 @@
                       </tbody>
                    </table>
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                   <table id="row4-2" class="array1d" style="width:3%;" border="1" rules="all">
+                   <table id="row4-2" class="table" style="width:3%;"">
                       <tbody>
                          <tr style="visibility:hidden;">
-                            <td></td>
+                            <td class="array1d"></td>
                          </tr>
                          <tr style="visibility:hidden;"  class="noborder">
                             <td></td>
@@ -223,10 +219,10 @@
                    </table>
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                   <table id="row4-3" class="array1d" style="width:3%;" border="1" rules="all">
+                   <table id="row4-3" class="table" style="width:3%;" >
                       <tbody>
                          <tr style="visibility:hidden;">
-                            <td></td>
+                            <td class="array1d"></td>
                          </tr>
                          <tr style="visibility:hidden;" class="noborder">
                             <td></td>
@@ -234,10 +230,10 @@
                       </tbody>
                    </table>
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                   <table id="row4-4" class="array1d"  style="width:3%;" border="1" rules="all">
+                   <table id="row4-4" class="table"  style="width:3%;" >
                       <tbody>
                          <tr style="visibility:hidden;">
-                            <td></td>
+                            <td class="array1d"></td>
                          </tr>
                          <tr style="visibility:hidden;" class="noborder">
                             <td></td>
@@ -246,11 +242,11 @@
                    </table>
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                    &nbsp;&nbsp;&nbsp;
-                   <table id="row4-5" class="array1d" style="width:5%;" border="1" rules="all">
+                   <table id="row4-5" class="table" style="width:5%;">
                       <tbody>
                          <tr style="visibility:hidden;">
-                            <td></td>
-                            <td></td>
+                            <td class="array1d"></td>
+                            <td class="array1d"></td>
                          </tr>
                          <tr style="visibility:hidden;" class="noborder">
                             <td></td>
@@ -259,10 +255,10 @@
                       </tbody>
                    </table>
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                   <table id="row4-6" class="array1d"  style="width:3%;" border="1" rules="all">
+                   <table id="row4-6" class="table"  style="width:3%;">
                       <tbody>
                          <tr style="visibility:hidden;">
-                            <td></td>
+                            <td class="array1d"></td>
                          </tr>
                          <tr style="visibility:hidden;" class="noborder">
                             <td></td>
@@ -271,10 +267,10 @@
                    </table>
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                   <table id="row4-7" class="array1d"  style="width:3%;" border="1" rules="all">
+                   <table id="row4-7" class="table"  style="width:3%;">
                       <tbody>
                          <tr style="visibility:hidden;">
-                            <td></td>
+                            <td class="array1d"></td>
                          </tr>
                          <tr style="visibility:hidden;" class="noborder">
                             <td></td>
@@ -282,10 +278,10 @@
                       </tbody>
                    </table>
                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                   <table id="row4-8" class="array1d"  style="width:3%;" border="1" rules="all">
+                   <table id="row4-8" class="table"  style="width:3%;">
                       <tbody>
                          <tr style="visibility:hidden;">
-                            <td></td>
+                            <td class="array1d"></td>
                          </tr>
                          <tr style="visibility:hidden;" class="noborder">
                             <td></td>
@@ -303,7 +299,7 @@
                         <input class="control_buttons refresh" type="button" value="refresh" id="refresh" onclick="refresh()"></input> &nbsp;&nbsp;
                   <input class="control_buttons reset" type="button" value="reset" id="reset" onclick="reset()"></input> &nbsp; &nbsp;
                   <br></br>
-                  <p>NOTE: This visualization works perfectly only when using chrome desktop browser in maximized window.</p>
+                  <p>NOTE: This visualization looks perfect when using desktop browser in maximized window.And this visualization is not displayed correctly in firefox due to its internal bug which will replace html border color with background color. </p>
 					
                <br></br>
                 </div >
@@ -320,7 +316,7 @@
                 </div>
                 <br></br><br></br>
 
-                <div>
+                <div class="container">
                   <p style="font-size:24px;color:yellow; margin-left:80px;">Merge Sort Code in C:</p>
                    <pre>
                       <code style="color:white;">

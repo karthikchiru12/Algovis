@@ -78,10 +78,12 @@ body{
 {
   color:white;
   border:0;
+  text-align: center;
 }
 .array_1d
 {
  border: 1px solid white;	
+ text-align: center;
 }
 /*array styling*/
 
@@ -330,17 +332,19 @@ body{
 
 .array1d
 {
-    border: 1px solid white;
-  	color:white;
-	  border-collapse: collapse;
-    text-align:center;
+  border: 1px solid white;	
+  text-align: center;
+  background-clip: padding-box;
+  position: static;
 		
 }
 .noborder
 {
-    border-color:#333;
-    color:white;
-    text-align: center;
+  color:white;
+  border:0;
+  text-align: center;
+  background-clip: padding-box;
+  position: static;
 }
 /*merge sort css*/
 

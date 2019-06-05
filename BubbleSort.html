@@ -1,8 +1,8 @@
 <!doctype html>
 <html>
-    <head><title>AlgoVis : Bubble_Sort</title>
+    <head><title>AlgoVis :Optimized_Bubble_Sort</title>
             <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <meta name="viewport" content="width=1024, initial-scale=1,user-scalable=no">
         <link rel="icon" href="assets/favicon.ico">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
@@ -40,39 +40,39 @@
                     </div>
                   </nav><br><br>
 
-
+  <div class="container">
     <div id="anim">
-            <h3 class="h3" style="margin-left:5%;">Bubble Sort</h3><br>
-            <p class="p" style="margin-left: 5%">Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order. The pass through the list is repeated until no swaps are needed, which indicates that the list is sorted. The algorithm, which is a comparison sort, is named for the way smaller or larger elements "bubble" to the top of the list. Although the algorithm is simple, it is too slow and impractical for most problems even when compared to insertion sort.[2] Bubble sort can be practical if the input is in mostly sorted order with some out-of-order elements nearly in position</p><br><br>
-            <h4 class="h4" align="center" style="font-size:18px;">Bubble Sort Visualization</h4><br>
+            <h3 class="h3">Bubble Sort</h3>
+            <p class="p">Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items and swaps them if they are in the wrong order. The pass through the list is repeated until no swaps are needed, which indicates that the list is sorted. The algorithm, which is a comparison sort, is named for the way smaller or larger elements "bubble" to the top of the list. Although the algorithm is simple, it is too slow and impractical for most problems even when compared to insertion sort.Bubble sort can be practical if the input is in mostly sorted order with some out-of-order elements nearly in position</p><br><br>
+            <h4 class="h4" align="center" style="font-size:18px;">Bubble Sort Visualization</h4>
 
             <div align="center">
-                    <table class="table array_1d" rules="all" id="array_1d" >
+                    <table class="table" id="array_1d" >
                     <tr>
-                    <th>A[0]</th>
-                    <th>A[1]</th>
-                    <th>A[2]</th>
-                    <th>A[3]</th>
-                    <th>A[4]</th>
-                    <th>A[5]</th>
-                    <th>A[6]</th>
-                    <th>A[7]</th>
-                    <th>A[8]</th>
-                    <th>A[9]</th>
-                    <th>A[10]</th>
+                    <th class="array1d">A[0]</th>
+                    <th class="array1d">A[1]</th>
+                    <th class="array1d">A[2]</th>
+                    <th class="array1d">A[3]</th>
+                    <th class="array1d">A[4]</th>
+                    <th class="array1d">A[5]</th>
+                    <th class="array1d">A[6]</th>
+                    <th class="array1d">A[7]</th>
+                    <th class="array1d">A[8]</th>
+                    <th class="array1d">A[9]</th>
+                    <th class="array1d">A[10]</th>
                     </tr>
                     <tr>
-                    <td>10</td>
-                    <td>21</td>
-                    <td>12</td>
-                    <td>37</td>
-                    <td>14</td>
-                    <td>59</td>
-                    <td>56</td>
-                    <td>74</td>
-                    <td>80</td>
-                    <td>39</td>
-                    <td>20</td>
+                    <td class="array1d">10</td>
+                    <td class="array1d">21</td>
+                    <td class="array1d">12</td>
+                    <td class="array1d">37</td>
+                    <td class="array1d">14</td>
+                    <td class="array1d">59</td>
+                    <td class="array1d">56</td>
+                    <td class="array1d">74</td>
+                    <td class="array1d">80</td>
+                    <td class="array1d">39</td>
+                    <td class="array1d">20</td>
                     </tr>
                     <tr class="description">
                     <td></td>
@@ -100,9 +100,9 @@
           
                 </div><br>
 
-                <div> <!----console-->
-                    <div id="details">
-                            <div id="console">
+                <div class="container"> <!----console-->
+                    <div class="row" id="details">
+                            <div  class="column" id="console">
 									<br>
 									<br>
 									<br>
@@ -112,7 +112,7 @@
 										<p id="comp" style="color:yellow; font-family:Yanone Kaffeesatz;"></p>
 									</center>
                             </div>
-                            <div id="trace">
+                            <div class="column" id="trace">
                               <fieldset>
                                 <legend>Trace</legend>
                                 <ul type="none">
@@ -132,10 +132,11 @@
                  </div>
 
                 </div>
+              </div>
 
                 <br></br>
 
-                <div>
+                <div class="container">
                   <p style="font-size:24px;color:yellow; margin-left:80px;">Bubble Sort Code in C:</p>
                    <pre>
                       <code style="color:white;">
