@@ -26,7 +26,7 @@
 body{
   height: 100%;
   width: 100%;
-  background-color:#333; 
+  background-color:black; 
   position: relative;
 }
 
@@ -73,21 +73,15 @@ body{
 /*hover animation by Sean McCaffery*/
 
 /*array styling*/
+
 .description
 {
-	border-color:#333;
-	color:white;
+  color:white;
+  border:0;
 }
 .array_1d
 {
-
-	color:white;
-	border:1px solid white; 
-	border-collapse: collapse;
-	text-align:center;
-	width:90%;
-	height:20%;
-		
+ border: 1px solid white;	
 }
 /*array styling*/
 
@@ -178,17 +172,13 @@ body{
 	font-size:15px;
   font-family:Open Sans Condensed;
   width: 50%;
-  margin-left: 4%;
+  margin-right: 10%;
   color:white;
 }
-#trace
-{
-  width: 50%;
-  margin-left: 30%;
-}
-#details
-{
-  display: flex;
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 /*The tracing and details and log part styling*/
 
@@ -301,10 +291,10 @@ body{
 .line-1{
     position: relative;
     top: 50%;  
-    width: 24em;
+    width: 22em;
     margin: 0 auto;
     border-right: 2px solid rgba(255,255,255,.75);
-    font-size: 180%;
+    font-size: 158%;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
