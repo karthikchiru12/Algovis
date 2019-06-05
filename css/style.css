@@ -359,7 +359,7 @@ h1 {
 
 canvas {
   border: 1px solid white;
-  background-color: #333;
+  background-color: indigo;
 }
 
 .canvas-picking-active {
@@ -370,7 +370,7 @@ canvas {
 .controls {
   display: flex;
   width: 1024px;
-  border: 1px solid #333;
+  border: 1px solid black;
   margin-top: 10px;
 }
 
@@ -399,7 +399,7 @@ canvas {
 
 .controls button {
   padding: 2px 5px;
-  border: 2px #333 outset;
+  border: 2px black outset;
   cursor: hand;
 }
 
@@ -407,7 +407,7 @@ canvas {
   flex-grow: 1;
   margin: 0;
   display: inline-block;
-  border-right: 1px solid #333;
+  border-right: 1px solid black;
   padding: 5px 10px 10px;
 }
 
@@ -429,7 +429,7 @@ canvas {
   content: '';
   display: block;
   margin-top: 10px;
-  border-top: 1px solid #333;
+  border-top: 1px solid black;
   padding-top: 10px;
 }
 /*k means clustering css */
