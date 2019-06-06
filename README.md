@@ -18,7 +18,7 @@ Algorithm visualizations currently available: <br>
 7. Selection sort (Under Development)
 8. K Means Clustering
 
-You can download the code from Algovis github repository: https://github.com/karthikchiru12/Algovis <br>
+You can download the code from this repository <br>
 Download the zip and extract it.<br>
 Run the index.html and you are good to go without any other requirements.<br>
 Feel free to experiment and change a line of code here and there and see what changes happen. <br>
@@ -28,13 +28,13 @@ Feel free to experiment and change a line of code here and there and see what ch
 2. Even then if it does not work then try using a different browser.
 
 <h5>NOTE :</h5> <p><b> 
-  
-[![Woks-On: Chromium-Based-browsers](https://img.shields.io/badge/Works--On-Chromium--Based--Browsers-green.svg)](https://en.wikipedia.org/wiki/Chromium_(web_browser))
-<br>
-All visualizations are tested in browsers that use chromium engine. All visualizations work perfectly in the chromium based browsers.
-Other browsers show some issues and are not displaying all visualizations correctly.</b></p>
+
+1. All visualizations are tested in various browsers. All visualizations work perfectly except the merge sort in firefox browser due to its internal bug.</b></p> 
+2. K means clustering visualization was taken from here : https://github.com/hckr/k-means-visualization .
+All the rights belong to the respectful owner.
+
 
 You can see the visualizations at   https://chiranjeevikarthik.me/Algovis/
 
 #### Update:
-Several Cheatsheets for various CS subjects are added.
+Several Cheatsheets for various subjects are added.
