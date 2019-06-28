@@ -31,7 +31,6 @@ Feel free to experiment and change a line of code here and there and see what ch
 
 1. All visualizations are tested in various browsers. All visualizations work perfectly except the merge sort in firefox browser due to its internal bug.</b></p> 
 2. K means clustering visualization was taken from here : https://github.com/hckr/k-means-visualization .
-All the rights belong to the respectful owner.
 
 
 You can see the visualizations at   https://chiranjeevikarthik.me/Algovis/
@@ -40,3 +39,8 @@ You can see the visualizations at   https://chiranjeevikarthik.me/Algovis/
 1. Several Cheatsheets for various subjects are added. (May 2019). <br>
 2. A new Dataset section is added. (Jun 2019).
 
+#### Screenshots :
+
+![alt text](assets/Screenshots/screenshot_1.png) <br></br>
+![alt text](assets/Screenshots/screenshot_2.png) <br></br>
+![alt text](assets/Screenshots/screenshot_3.png) <br></br>
