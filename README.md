@@ -37,6 +37,6 @@ All the rights belong to the respectful owner.
 You can see the visualizations at   https://chiranjeevikarthik.me/Algovis/
 
 #### Update:
-Several Cheatsheets for various subjects are added. (May 2019) <br>
-A new Dataset section is added.
+1. Several Cheatsheets for various subjects are added. (May 2019). <br>
+2. A new Dataset section is added. (Jun 2019).
 
