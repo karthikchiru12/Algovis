@@ -43,4 +43,3 @@ You can see the visualizations at   https://chiranjeevikarthik.me/Algovis/
 
 ![alt text](assets/Screenshots/screenshot_1.png) <br></br>
 ![alt text](assets/Screenshots/screenshot_2.png) <br></br>
-![alt text](assets/Screenshots/screenshot_3.png) <br></br>
