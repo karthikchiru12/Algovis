@@ -21,7 +21,9 @@
 *{
 	margin:0px;
 	padding:0px;
-	box-sizing: border-box;
+  box-sizing: border-box;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 body{
   height: 100%;
@@ -433,3 +435,12 @@ canvas {
   padding-top: 10px;
 }
 /*k means clustering css */
+
+/*selection sort css*/
+.temp_var
+{
+  border: 1px solid white;	
+  text-align: center;
+  
+}
+/*selection sort css*/

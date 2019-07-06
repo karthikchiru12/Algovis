@@ -29,8 +29,7 @@ var status; //possible values={pl(play()),done(either element found or reset but
 var msg="";//used to display current key value to the user//
 var temp;//used as a temporary variable//
 var x;//extra//
-var i=0,j=0,p=0,q=0;
-var swap=0;
+var i=0,j=0,curr=0,timer=1000;
 var n=11;
 var step1="enter";
 var step2="";
@@ -40,10 +39,10 @@ var str;
 var finish=0;
 var swap_count=0;
 var sort=0;
-var comp=0;
-var a={};
+var a=[];
 var min=0;
 var min_index=0;
+var a,b;
 
 //reset function
 function reset()
@@ -53,25 +52,28 @@ function reset()
 	 /* The Limitation of the reset function is that it cannot be invoked while
 	    the anim() is running as it interferes with setInterval() and produces 
 		unexpected results*/
+     c=0;
      msg="";
      finish=0;
-     findmin="enter";
-	   process="";
-	   exchange="";
-	   swap=0;
+     step1="enter";
+	 step2="";
+	 step3="";
+	 swap_count=0;
+	 temp=0;
+	 sort=0;
+     comp=0;
+     a=0;
+     b=0;
      min=0;
-	   swap_count=0;
-	   temp=0;
-	   sort=0;
-	   comp=0;
-     document.getElementById('swap').innerHTML="";
+     min_index=0;
+     a=[];
+     curr=0;
      document.getElementById('swap_count').innerHTML="";
-     document.getElementById('comp').innerHTML="";
-	   document.getElementById('line7').style.backgroundColor="";
-     for(var temp=0;temp<11;temp++)
+     document.getElementById('swap').innerHTML="";
+     for(let p=0;p<11;p++)
      {
-      arr.rows[1].cells[temp].style.backgroundColor="";
-	  arr.rows[2].cells[temp].innerHTML="";
+      arr.rows[1].cells[p].style.backgroundColor="";
+	  arr.rows[2].cells[p].innerHTML="";
      }
 	 
 	 arr.rows[r].cells[0].innerHTML="56";
@@ -94,6 +96,7 @@ function reset()
 	 }
 	 
      }
+    
 }
 //reset function
  
@@ -105,7 +108,7 @@ function play_asc()
   var id = setInterval(anm,1000);//we repeat anim() function for every 2500ms until clearInterval(id) is called//
   function anm()
   {
-   
+        status="pl";
         if(sort==1)
         {
             alert("The array is already sorted, please refresh to sort a new array...!");
@@ -125,16 +128,143 @@ function play_asc()
             status="pl";
             
             
-        }
-
+        
 
         
 
+
+        if(step3=="complete")
+        {
+            step3="";
+            step1="enter";
+        }
+        if(step3=="enter")
+        {
+            arr.rows[r+1].cells[curr].innerHTML='';
+            arr.rows[r+1].cells[min_index].innerHTML='';
+            curr++;
+            temp=min_index;
+            arr.rows[r].cells[temp].style.backgroundColor='';
    
+            a=[];
+            step3="complete";
+
+        }
+
+
+        if(step2=="complete")
+        {
+            if(min_index!=curr)
+            {
+                arr.rows[r].cells[curr].style.backgroundColor='blue';
+                a=Number(arr.rows[r].cells[curr].innerHTML);
+                arr.rows[r+1].cells[curr].innerHTML='&#8593;';
+                b=Number(arr.rows[r].cells[min_index].innerHTML);
+                arr.rows[r+1].cells[min_index].innerHTML='&#8593;';
+                temp=a;
+                a=b;
+                b=temp;
+                swap_count++;
+                document.getElementById('swap_count').innerHTML="Number of swaps : "+swap_count;
+                document.getElementById('swap').innerHTML="Swapped "+a+" & "+b;
+                arr.rows[r].cells[min_index].innerHTML=b;
+                arr.rows[r].cells[curr].innerHTML=a;
+                step2="";
+                step3="enter";
+            }
+            else
+            {
+                arr.rows[r].cells[curr].style.backgroundColor='blue';
+                step2="";
+                step3="complete";
+                curr++;
+                a=[];
+
+            }
+        }
+        if(step2=="enter")
+        {
+                arr.rows[r].cells[min_index].style.backgroundColor='green';
+                step2="complete";
+        }
+
+        if(step1=="complete")
+        {       i=curr;
+                document.getElementById('temp_var').style.visibility='visible';
+                temp=Number(arr.rows[r].cells[i].innerHTML);
+                document.getElementById('temp_var').rows[1].cells[1].innerHTML=temp;
+                
+                var tr=setInterval(function(){
+                    if(i<n)
+                    {
+                        arr.rows[r].cells[i].style.backgroundColor='red';
+                        p=Number(arr.rows[r].cells[i].innerHTML);
+                        q=Number(document.getElementById('temp_var').rows[1].cells[1].innerHTML);
+                        if(p<q)
+                        {
+                            document.getElementById('temp_var').rows[1].cells[1].innerHTML=p;
+                            
+                        }
+                        i++;
+                    }
+                    else
+                    {
+                        for(j=curr;j<n;j++)
+                        {   
+                            arr.rows[r].cells[j].style.backgroundColor='';
+                            if(Number(arr.rows[r].cells[j].innerHTML)==min)
+                            {
+                                arr.rows[r].cells[j].style.backgroundColor='green';
+                                min_index=j;
+                                console.log(j);
+                            }
+                        }
+                        
+                        clearInterval(tr);
+                        step1="";
+                        step2="enter";
+                    }
+                },timer);
+
+                
+        }
+        if(step1=="enter")
+        {
+            if(curr==n)
+            {
+                sort=1;
+                status="done";
+                finish=1;
+                step1="";
+                document.getElementById('temp_var').style.visibility='hidden';
+                clearInterval(id);
+            }
+           try
+           { 
+            for(i=curr;i<n;i++)
+            {
+                a.push(Number(arr.rows[r].cells[i].innerHTML));
+            }
+           }
+           catch(err)
+           {
+               console.log(err.message);
+           }
+           min= Math.min.apply(null, a);
+           console.log(a);
+           console.log("min = "+min);
+           step1="complete";
+            
+        }
+
+        
+        
+
+    }
 
   }
 }
-  
+//refresh function//
 function refresh()
 {
  if((finish==0&&status!="pl")||(finish==1&&status=="done"))
@@ -147,10 +277,12 @@ function refresh()
 	 sort=0;
      comp=0;
      min=0;
+     min_index=0;
+     status="";
+     a=[];
+     curr=0;
   document.getElementById('swap').innerHTML="";
-  document.getElementById('comp').innerHTML="";
   document.getElementById('swap_count').innerHTML="";
-  document.getElementById('line7').style.backgroundColor="";
   for(var i=0;i<col_len;i++)
   {
    x=Math.floor((Math.random() * 100) + 1);//random value is generated between 0 and 1 *100 +1//

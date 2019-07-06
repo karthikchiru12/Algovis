@@ -148,7 +148,6 @@ function play_asc()
 	  i++;
 	  j=0;
 	  next=0;
-	  document.get
 	  step1="enter"; 
 	  msg="";
 	  document.getElementById('comp').innerHTML="";
