@@ -112,7 +112,8 @@
                         <button class="sort_button" onclick="play_asc()" id="sort"><span>Sort </span></button>
                         <br><br>
                         <input class="control_buttons refresh" type="button" value="refresh" onclick="refresh()"></input> &nbsp;&nbsp;
-						<input class="control_buttons reset" type="button" value="reset" onclick="reset()"></input> &nbsp; &nbsp;
+            <input class="control_buttons reset" type="button" value="reset" onclick="reset()"></input> &nbsp; &nbsp;
+            <input class="control_buttons reset" type="button" value="pause" onclick="pause()"></input>
 					
           
                 </div><br>
@@ -132,14 +133,17 @@
                               <fieldset>
                                 <legend>Trace</legend>
                                 <ul type="none">
-                                <li id="line1">procedure bubble_sort (list)</li>
-                                <li id="line2">&nbsp;for all elements in list</li>
-                                <li id="line3"> &nbsp; &nbsp;if list[i] > list[i+1]</li>
-                                <li id="line4">  &nbsp; &nbsp; &nbsp;&nbsp;swap(list[i], list[i+1])</li>
-                                <li id="line5"> &nbsp;&nbsp;&nbsp;end if</li>
-                                <li id="line6">  &nbsp;end for</li>
-                                <li id="line7"> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return list</li>
-                                <li id="line8">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;end BubbleSort</li>
+                                <li id="line1">current=0</li>
+                                <li id="line2">procedure selection_sort (list)</li>
+                                <li id="line3">&nbsp;&nbsp;while(current!=n)</li>
+                                <li id="line4"> &nbsp; &nbsp;&nbsp;&nbsp;min_index = find_min_index(list,current,n)</li>
+                                <li id="line5"> &nbsp; &nbsp;&nbsp;&nbsp;if(current!=swap)</li>
+                                <li id="line6">  &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;swap(list[current], list[min_index])</li>
+                                <li id="line7">  &nbsp; &nbsp; &nbsp;end if</li>
+                                <li id="line8">  &nbsp; &nbsp; &nbsp;current++</li>
+                                <li id="line9"> &nbsp;&nbsp;end while</li>
+                                <li id="line10"> &nbsp;&nbsp;return list</li>
+                                <li id="line11">  &nbsp;end selection_sort procedure</li>
                                 </ul>
                                </fieldset>
                            </div>

@@ -29,7 +29,7 @@ var status; //possible values={pl(play()),done(either element found or reset but
 var msg="";//used to display current key value to the user//
 var temp;//used as a temporary variable//
 var x;//extra//
-var i=0,j=0,curr=0,timer=1000;
+var i=0,j=0,curr=0,timer=1000,p=0,q=0;
 var n=11;
 var step1="enter";
 var step2="";
@@ -42,12 +42,11 @@ var sort=0;
 var a=[];
 var min=0;
 var min_index=0;
-var a,b;
 
 //reset function
 function reset()
 {
-    if(status=="done"&&(finish==1||finish==0)&&status!="pl")
+    if((status=="done"||status=="")&&(finish==1||finish==0)&&status!="pl")
     {
 	 /* The Limitation of the reset function is that it cannot be invoked while
 	    the anim() is running as it interferes with setInterval() and produces 
@@ -61,13 +60,14 @@ function reset()
 	 swap_count=0;
 	 temp=0;
 	 sort=0;
-     comp=0;
      a=0;
      b=0;
      min=0;
      min_index=0;
      a=[];
      curr=0;
+     p=0;
+     q=0;
      document.getElementById('swap_count').innerHTML="";
      document.getElementById('swap').innerHTML="";
      for(let p=0;p<11;p++)
@@ -86,7 +86,13 @@ function reset()
 	 arr.rows[r].cells[7].innerHTML="98";
 	 arr.rows[r].cells[8].innerHTML="124";
 	 arr.rows[r].cells[9].innerHTML="46";
-	 arr.rows[1].cells[10].innerHTML="35";
+     arr.rows[1].cells[10].innerHTML="35";
+     
+     document.getElementById('line4').style.backgroundColor='';
+     document.getElementById('line6').style.backgroundColor='';
+     document.getElementById('line8').style.backgroundColor='';
+     document.getElementById('line10').style.backgroundColor='';
+     document.getElementById('sort').style.visibility='visible';
 	 
      status="";
 	 if(s==true)
@@ -108,7 +114,7 @@ function play_asc()
   var id = setInterval(anm,1000);//we repeat anim() function for every 2500ms until clearInterval(id) is called//
   function anm()
   {
-        status="pl";
+      
         if(sort==1)
         {
             alert("The array is already sorted, please refresh to sort a new array...!");
@@ -135,16 +141,21 @@ function play_asc()
 
         if(step3=="complete")
         {
+
             step3="";
             step1="enter";
         }
         if(step3=="enter")
         {
+            arr.rows[r].cells[curr].style.backgroundColor='indigo';
             arr.rows[r+1].cells[curr].innerHTML='';
             arr.rows[r+1].cells[min_index].innerHTML='';
             curr++;
             temp=min_index;
             arr.rows[r].cells[temp].style.backgroundColor='';
+            document.getElementById('line8').style.backgroundColor='red';
+            document.getElementById('line6').style.backgroundColor='';
+            document.getElementById('line4').style.backgroundColor='';
    
             a=[];
             step3="complete";
@@ -156,7 +167,10 @@ function play_asc()
         {
             if(min_index!=curr)
             {
+                document.getElementById('line4').style.backgroundColor='';
+                document.getElementById('line6').style.backgroundColor='red';
                 arr.rows[r].cells[curr].style.backgroundColor='blue';
+                arr.rows[r].cells[min_index].style.backgroundColor='blue';
                 a=Number(arr.rows[r].cells[curr].innerHTML);
                 arr.rows[r+1].cells[curr].innerHTML='&#8593;';
                 b=Number(arr.rows[r].cells[min_index].innerHTML);
@@ -174,7 +188,10 @@ function play_asc()
             }
             else
             {
-                arr.rows[r].cells[curr].style.backgroundColor='blue';
+                document.getElementById('line8').style.backgroundColor='red';
+                document.getElementById('line4').style.backgroundColor='';
+                
+                arr.rows[r].cells[curr].style.backgroundColor='indigo';
                 step2="";
                 step3="complete";
                 curr++;
@@ -197,6 +214,7 @@ function play_asc()
                 var tr=setInterval(function(){
                     if(i<n)
                     {
+                        document.getElementById('line4').style.backgroundColor='red';
                         arr.rows[r].cells[i].style.backgroundColor='red';
                         p=Number(arr.rows[r].cells[i].innerHTML);
                         q=Number(document.getElementById('temp_var').rows[1].cells[1].innerHTML);
@@ -232,11 +250,13 @@ function play_asc()
         {
             if(curr==n)
             {
+                
                 sort=1;
                 status="done";
                 finish=1;
                 step1="";
                 document.getElementById('temp_var').style.visibility='hidden';
+                document.getElementById('line10').style.backgroundColor='green';
                 clearInterval(id);
             }
            try
@@ -253,6 +273,9 @@ function play_asc()
            min= Math.min.apply(null, a);
            console.log(a);
            console.log("min = "+min);
+           document.getElementById('line4').style.backgroundColor='';
+           document.getElementById('line8').style.backgroundColor='';
+           document.getElementById('sort').style.visibility='hidden';
            step1="complete";
             
         }
@@ -269,25 +292,48 @@ function refresh()
 {
  if((finish==0&&status!="pl")||(finish==1&&status=="done"))
  {
+     
+     c=0;
      msg="";
      finish=0;
-	 swap=0;
+     step1="enter";
+	 step2="";
+	 step3="";
 	 swap_count=0;
 	 temp=0;
 	 sort=0;
-     comp=0;
+     a=0;
+     b=0;
      min=0;
      min_index=0;
-     status="";
      a=[];
      curr=0;
-  document.getElementById('swap').innerHTML="";
-  document.getElementById('swap_count').innerHTML="";
+     p=0;
+     q=0;
+     status="";
+     document.getElementById('swap').innerHTML="";
+     document.getElementById('swap_count').innerHTML="";
+     document.getElementById('line4').style.backgroundColor='';
+     document.getElementById('line6').style.backgroundColor='';
+     document.getElementById('line8').style.backgroundColor='';
+     document.getElementById('line10').style.backgroundColor='';
+     document.getElementById('sort').style.visibility='visible';
   for(var i=0;i<col_len;i++)
   {
    x=Math.floor((Math.random() * 100) + 1);//random value is generated between 0 and 1 *100 +1//
    arr.rows[r].cells[i].innerHTML=x;
+   arr.rows[r].cells[i].style.backgroundColor='';
   }
  }
 }
 //refresh function end...
+
+//pause function
+function pause()
+{
+    if(status=='pl')
+    {
+        confirm('Visualization Paused...Press OK or Cancel to Resume');
+    }
+}
+//pause function
