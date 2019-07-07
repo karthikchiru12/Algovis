@@ -937,7 +937,6 @@ var res;
 
       function st()
       {
-        op1();
         res=localStorage.getItem("ref");
         if((res.toString())=="true")
         {
@@ -949,4 +948,10 @@ var res;
          r="false";
          localStorage.setItem("ref",r);
         }
+      }
+
+      function start()
+      {
+        st();
+        op1();
       }
