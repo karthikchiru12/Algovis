@@ -889,6 +889,20 @@ var res;
                 document.getElementById('sort').style.visibility="visible";
                 document.getElementById('reset').style.visibility="visible";
                 document.getElementById('refresh').style.visibility="visible";
+                row21.style.display='none';
+                row22.style.display='none';
+                row31.style.display='none';
+                row32.style.display='none';
+                row33.style.display='none';
+                row34.style.display='none';
+                row41.style.display='none';
+                row42.style.display='none';
+                row43.style.display='none';
+                row44.style.display='none';
+                row45.style.display='none';
+                row46.style.display='none';
+                row47.style.display='none';
+                row48.style.display='none';
 
              }
            ,42000);
