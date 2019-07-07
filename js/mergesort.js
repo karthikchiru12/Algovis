@@ -937,6 +937,7 @@ var res;
 
       function st()
       {
+        op1();
         res=localStorage.getItem("ref");
         if((res.toString())=="true")
         {
