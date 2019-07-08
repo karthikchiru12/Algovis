@@ -1,0 +1,149 @@
+---
+layout: algorithm
+permalink: /algorithms/sorting/optimized-bubble
+algorithm: optimizedbubblesort
+---
+<div class="container">
+  <div id="anim">
+    <h3 class="h3">Optimized Bubble Sort</h3><br>
+    <p class="p">The bubble sort algorithm can be easily optimized by observing that the n-th pass finds the n-th
+      largest element and puts it into its final place. So, the inner loop can avoid looking at the last n − 1 items
+      when running for the n-th time.</p><br><br>
+    <h4 class="h4" align="center" style="font-size:18px;">Optimized Bubble Sort Visualization</h4>
+
+    <div align="center">
+      <table class="table" id="array_1d">
+        <tr>
+          <th class="array1d">A[0]</th>
+          <th class="array1d">A[1]</th>
+          <th class="array1d">A[2]</th>
+          <th class="array1d">A[3]</th>
+          <th class="array1d">A[4]</th>
+          <th class="array1d">A[5]</th>
+          <th class="array1d">A[6]</th>
+          <th class="array1d">A[7]</th>
+          <th class="array1d">A[8]</th>
+          <th class="array1d">A[9]</th>
+          <th class="array1d">A[10]</th>
+        </tr>
+        <tr>
+          <td class="array1d">10</td>
+          <td class="array1d">21</td>
+          <td class="array1d">12</td>
+          <td class="array1d">37</td>
+          <td class="array1d">14</td>
+          <td class="array1d">59</td>
+          <td class="array1d">56</td>
+          <td class="array1d">74</td>
+          <td class="array1d">80</td>
+          <td class="array1d">39</td>
+          <td class="array1d">20</td>
+        </tr>
+        <tr class="description">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+
+    <div align="center">
+      <!----controls-->
+      <p id="pass" style="color:white;">Number of passes completed :</p>
+      <button class="sort_button" onclick="play_asc()" id="sort"><span>Sort </span></button>
+      <br><br>
+      <input class="control_buttons refresh" type="button" value="refresh" onclick="refresh()"></input> &nbsp;&nbsp;
+      <input class="control_buttons reset" type="button" value="reset" onclick="reset()"></input> &nbsp; &nbsp;
+      <input class="control_buttons reset" type="button" value="pause" onclick="pause()">
+
+    </div><br>
+
+    <div class="container">
+      <!----console-->
+      <div class="row" id="details">
+        <div class="column" id="console">
+          <br>
+          <br>
+          <br>
+          <center>
+            <p id="swap" style="color:white; font-family:Yanone Kaffeesatz;"></p>
+            <p id="swap_count" style="color:yellow; font-family:Yanone Kaffeesatz;"></p>
+            <p id="comp" style="color:yellow; font-family:Yanone Kaffeesatz;"></p>
+          </center>
+        </div>
+        <div class="column" id="trace">
+          <fieldset>
+            <legend>Trace</legend>
+            <ul type="none">
+              <li id="line1">procedure optimized_bubble_sort (list [n])</li>
+              <li id="line2">&nbsp;for all elements in list of size [n]</li>
+              <li id="line3"> &nbsp; &nbsp;if list[i] > list[i+1]</li>
+              <li id="line4"> &nbsp; &nbsp; &nbsp;&nbsp;swap(list[i], list[i+1])</li>
+              <li id="line5"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;n=n-1</li>
+              <li id="line6"> &nbsp;&nbsp;&nbsp;end if</li>
+              <li id="line7"> &nbsp;end for</li>
+              <li id="line8"> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return list</li>
+              <li id="line9">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;end BubbleSort</li>
+            </ul>
+          </fieldset>
+        </div>
+      </div>
+      <br><br>
+    </div>
+
+  </div>
+</div>
+
+<br></br>
+
+<div class="container">
+  <p style="font-size:24px;color:yellow; margin-left:80px;">Optimized Bubble Sort Code in C:</p>
+  <pre>
+                      <code style="color:white;">
+                        #include &lt;stdio.h&gt;
+ 
+                        int main()
+                        {
+                          int array[100], n, c, d, swap;
+                         
+                          printf("Enter number of elements\n");
+                          scanf("%d", &n);
+                         
+                          printf("Enter %d integers\n", n);
+                         
+                          for (c = 0; c < n; c++)
+                            scanf("%d", &array[c]);
+                         
+                          for (c = 0 ; c < n - 1; c++)
+                          {
+                            for (d = 0 ; d < n - c - 1; d++)
+                            {
+                              if (array[d] > array[d+1]) /* For decreasing order use < */
+                              {
+                                swap       = array[d];
+                                array[d]   = array[d+1];
+                                array[d+1] = swap;
+                              }
+                            }
+                          }
+                         
+                          printf("Sorted list in ascending order:\n");
+                         
+                          for (c = 0; c < n; c++)
+                             printf("%d\n", array[c]);
+                         
+                          return 0;
+                        }
+                      </code>
+                   </pre>
+</div>
+
+</div>
