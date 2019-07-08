@@ -15,7 +15,7 @@ Algorithm visualizations currently available: <br>
 4. Optimized Bubble sort
 5. Merge sort 
 6. Insertion sort (Under Development)
-7. Selection sort (Under Development)
+7. Selection sort 
 8. K Means Clustering
 
 You can download the code from this repository <br>
@@ -38,6 +38,7 @@ You can see the visualizations at   https://chiranjeevikarthik.me/Algovis/
 #### Update:
 1. Several Cheatsheets for various subjects are added. (May 2019). <br>
 2. A new Dataset section is added. (Jun 2019).
+3. Jekyllified the site for faster performance and to make future builds easily.
 
 #### Screenshots :
 
