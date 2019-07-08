@@ -1,0 +1,164 @@
+---
+layout: algorithm
+permalink: /algorithms/searching/binary
+algorithm: binarysearch
+---
+<div class="container">
+  <div id="anim">
+    <div>
+      <h3 class="h3">Binary Search :</h3>
+      <p class="p">Binary search,also known as half-interval search, logarithmic search, or binary chop,is a search
+        algorithm that finds the position of a target value within a sorted array.[4][5] Binary search compares the
+        target value to the middle element of the array. If they are not equal, the half in which the target cannot lie
+        is eliminated and the search continues on the remaining half, again taking the middle element to compare to the
+        target value, and repeating this until the target value is found. If the search ends with the remaining half
+        being empty, the target is not in the array. Even though the idea is simple, implementing binary search
+        correctly requires attention to some subtleties about its exit conditions and midpoint calculation.
+
+        Binary search runs in logarithmic time in the worst case, making O(log n) comparisons, where n is the number of
+        elements in the array, the O is Big O notation, and log is the logarithm. Binary search takes constant (O(1))
+        space, meaning that the space taken by the algorithm is the same for any number of elements in the array.Binary
+        search is faster than linear search except for small arrays, but the array must be sorted first. Although
+        specialized data structures designed for fast searching, such as hash tables, can be searched more efficiently,
+        binary search applies to a wider range of problems.</p><br>
+      <h4 class="h4" align="center" style="font-size:18px;">Binary Search Visualization</h4>
+
+      <div align="center">
+        <table class="table" id="array_1d">
+          <tr>
+            <th class="array1d">A[0]</th>
+            <th class="array1d">A[1]</th>
+            <th class="array1d">A[2]</th>
+            <th class="array1d">A[3]</th>
+            <th class="array1d">A[4]</th>
+            <th class="array1d">A[5]</th>
+            <th class="array1d">A[6]</th>
+            <th class="array1d">A[7]</th>
+            <th class="array1d">A[8]</th>
+            <th class="array1d">A[9]</th>
+            <th class="array1d">A[10]</th>
+          </tr>
+          <tr class="array_1d">
+            <td class="array1d">0</td>
+            <td class="array1d">1</td>
+            <td class="array1d">2</td>
+            <td class="array1d">3</td>
+            <td class="array1d">4</td>
+            <td class="array1d">5</td>
+            <td class="array1d">6</td>
+            <td class="array1d">7</td>
+            <td class="array1d">8</td>
+            <td class="array1d">9</td>
+            <td class="array1d">10</td>
+          </tr>
+          <tr class="description">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+
+      <div align="center">
+        <!----controls-->
+        <p class="p" id="key" style="font-size:20px;"></p>
+        <br>
+        <label style="font-size:15px;">Enter value to search : </label>
+        <input type="number" placeholder="search key" id="key_val" style="height:22px;"> &nbsp;
+        <button class="search_button" onclick="search()"><span>search </span></button>
+        <br><br>
+        <input class="control_buttons refresh" type="button" value="refresh" onclick="refresh()"></input> &nbsp;&nbsp;
+        <input class="control_buttons reset" type="button" value="reset" onclick="reset()"></input> &nbsp; &nbsp;
+        <input class="control_buttons reset" type="button" value="pause" onclick="pause()"></input>
+
+      </div><br>
+    </div>
+
+    <div class="container">
+      <!----console-->
+      <div class="row" id="details">
+        <div class="column" id="console">
+          <br>
+          <p id="log" style="color:white; font-family:Yanone Kaffeesatz;"></p><br>
+          <p id="output" style="color:yellow; font-family:Yanone Kaffeesatz;"></p>
+        </div>
+        <div class="column" id="trace">
+          <fieldset>
+            <legend>Trace</legend>
+            <ul type="none">
+              <li id="line1">procedure binary_search (list, value)</li>
+              <li id="line2">&nbsp;while low <=high</li> <li id="line3"> &nbsp; &nbsp;mid = (low + high) / 2</li>
+              <li id="line4"> &nbsp; &nbsp; &nbsp;&nbsp; if (A[mid] < value)</li> <li id="line5"> &nbsp;&nbsp;&nbsp;
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;low = mid + 1</li>
+              <li id="line6"> &nbsp; &nbsp; &nbsp;&nbsp; else if (A[mid] > value)</li>
+              <li id="line7"> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;high = mid - 1</li>
+              <li id="line8">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;else</li>
+              <li id="line9">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; retrun mid</li>
+              <li id="line10">&nbsp;end while</li>
+              <li id="line11">end porcedure</li>
+            </ul>
+          </fieldset>
+        </div>
+      </div>
+      <br><br>
+    </div>
+
+  </div>
+</div>
+
+
+<br></br>
+
+<div class="container">
+  <p style="font-size:24px;color:orange; margin-left:80px;">Binary Search Code in C:</p>
+  <pre>
+                      <code style="color:white;">
+                          #include &lt;stdio.h&gt;
+ 
+                          int main()
+                          {
+                             int c, first, last, middle, n, search, array[100];
+                           
+                             printf("Enter number of elements\n");
+                             scanf("%d",&n);
+                           
+                             printf("Enter %d integers\n", n);
+                           
+                             for (c = 0; c < n; c++)
+                                scanf("%d",&array[c]);
+                           
+                             printf("Enter value to find\n");
+                             scanf("%d", &search);
+                           
+                             first = 0;
+                             last = n - 1;
+                             middle = (first+last)/2;
+                           
+                             while (first <= last) {
+                                if (array[middle] < search)
+                                   first = middle + 1;    
+                                else if (array[middle] == search) {
+                                   printf("%d found at location %d.\n", search, middle+1);
+                                   break;
+                                }
+                                else
+                                   last = middle - 1;
+                           
+                                middle = (first + last)/2;
+                             }
+                             if (first > last)
+                                printf("Not found! %d isn't present in the list.\n", search);
+                           
+                             return 0;  
+                          }
+                      </code>
+                   </pre>
+</div>

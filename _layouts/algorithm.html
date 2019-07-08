@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% include meta.html %}
+  {% include styles.html %}
+</head>
+
+<body onload="op1()">
+  {% include navigation.html %}
+  {{ content }}
+  {% include scripts.html %}
+  {% if page.algorithm %}<script src="/js/{{ page.algorithm }}.js"></script>{% endif %}
+</body>
+
+</html>

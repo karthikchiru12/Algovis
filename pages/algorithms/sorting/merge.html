@@ -1,0 +1,351 @@
+---
+layout: algorithm
+permalink: /algorithms/sorting/merge
+algorithm: mergesort
+---
+<div class="container-fluid" id="anim">
+   <h3 class="h3" style="margin-left:5%;">Merge Sort</h3><br>
+   <p class="p" style="margin-left: 5%">Merge sort is an efficient, general-purpose, comparison-based sorting algorithm.
+      Most implementations produce a stable sort, which means that the order of equal elements is the same in the input
+      and output.Merge sort is a divide and conquer algorithm.</p><br><br>
+   <h4 class="h4" align="center" style="font-size:18px;">Merge Sort Visualization</h4><br>
+   <p id="phase" align="center" style="color:antiquewhite;"></p>
+   <div id="anim" align="center">
+      <table id="row1" class="table" style="width:50%;">
+         <thead>
+            <tr>
+               <th class="array1d">A[0]</th>
+               <th class="array1d">A[1]</th>
+               <th class="array1d">A[2]</th>
+               <th class="array1d">A[3]</th>
+               <th class="array1d">A[4]</th>
+               <th class="array1d">A[5]</th>
+               <th class="array1d">A[6]</th>
+               <th class="array1d">A[7]</th>
+               <th class="array1d">A[8]</th>
+               <th class="array1d">A[9]</th>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td class="array1d">30</td>
+               <td class="array1d">20</td>
+               <td class="array1d">10</td>
+               <td class="array1d">6</td>
+               <td class="array1d">2</td>
+               <td class="array1d">90</td>
+               <td class="array1d">6</td>
+               <td class="array1d">23</td>
+               <td class="array1d">45</td>
+               <td class="array1d">12</td>
+            </tr>
+            <tr class="noborder">
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+               <td></td>
+         </tbody>
+      </table>
+      <br></br>
+      <div class="row" id="row2" style="margin-left:30%;">
+         <table id="row2-1" class="table" style="width:20%;">
+            <tbody>
+               <tr style="visibility:hidden;">
+                  <td class="array1d"></td>
+                  <td class="array1d"></td>
+                  <td class="array1d"></td>
+                  <td class="array1d"></td>
+                  <td class="array1d"></td>
+               </tr>
+               <tr style="visibility:hidden;" class="noborder">
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+            </tbody>
+         </table>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <table id="row2-2" class="table" style="width:20%;">
+            <tbody>
+               <tr style="visibility:hidden;">
+                  <td class="array1d"></td>
+                  <td class="array1d"></td>
+                  <td class="array1d"></td>
+                  <td class="array1d"></td>
+                  <td class="array1d"></td>
+               </tr>
+               <tr style="visibility:hidden;" class="noborder">
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <br></br>
+      <div class="row" id="row3" style="margin-left:20%;">
+         <table id="row3-1" class="table" style="width:10%;">
+            <tbody>
+               <tr style="visibility:hidden;">
+                  <td class="array1d"></td>
+                  <td class="array1d"></td>
+                  <td class="array1d"></td>
+               </tr>
+               <tr style="visibility:hidden;" class="noborder">
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+            </tbody>
+         </table>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <table id="row3-2" class="table" style="width:10%;">
+            <tbody>
+               <tr style="visibility:hidden;">
+                  <td class="array1d"></td>
+                  <td class="array1d"></td>
+               </tr>
+               <tr style="visibility:hidden;" class="noborder">
+                  <td></td>
+                  <td></td>
+               </tr>
+            </tbody>
+         </table>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <table id="row3-3" class="table" style="width:10%;">
+            <tbody>
+               <tr style="visibility:hidden;">
+                  <td class="array1d"></td>
+                  <td class="array1d"></td>
+                  <td class="array1d"></td>
+               </tr>
+               <tr style="visibility:hidden;" class="noborder">
+                  <td></td>
+                  <td></td>
+                  <td></td>
+               </tr>
+            </tbody>
+         </table>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <table id="row3-4" class="table" style="width:10%;">
+            <tbody>
+               <tr style="visibility:hidden;">
+                  <td class="array1d"></td>
+                  <td class="array1d"></td>
+               </tr>
+               <tr style="visibility:hidden;" class="noborder">
+                  <td></td>
+                  <td></td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <br></br>
+      <div class="row" id="row4" style="margin-left:18%;">
+         <table id="row4-1" class="table" style="width:5%;"">
+                      <tbody>
+                         <tr style=" visibility:hidden;">
+            <td class="array1d"></td>
+            <td class="array1d"></td>
+            </tr>
+            <tr style="visibility:hidden;" class="noborder">
+               <td></td>
+               <td></td>
+            </tr>
+            </tbody>
+         </table>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <table id="row4-2" class="table" style="width:3%;"">
+                      <tbody>
+                         <tr style=" visibility:hidden;">
+            <td class="array1d"></td>
+            </tr>
+            <tr style="visibility:hidden;" class="noborder">
+               <td></td>
+            </tr>
+            </tbody>
+         </table>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <table id="row4-3" class="table" style="width:3%;">
+            <tbody>
+               <tr style="visibility:hidden;">
+                  <td class="array1d"></td>
+               </tr>
+               <tr style="visibility:hidden;" class="noborder">
+                  <td></td>
+               </tr>
+            </tbody>
+         </table>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <table id="row4-4" class="table" style="width:3%;">
+            <tbody>
+               <tr style="visibility:hidden;">
+                  <td class="array1d"></td>
+               </tr>
+               <tr style="visibility:hidden;" class="noborder">
+                  <td></td>
+               </tr>
+            </tbody>
+         </table>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;
+         <table id="row4-5" class="table" style="width:5%;">
+            <tbody>
+               <tr style="visibility:hidden;">
+                  <td class="array1d"></td>
+                  <td class="array1d"></td>
+               </tr>
+               <tr style="visibility:hidden;" class="noborder">
+                  <td></td>
+                  <td></td>
+               </tr>
+            </tbody>
+         </table>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <table id="row4-6" class="table" style="width:3%;">
+            <tbody>
+               <tr style="visibility:hidden;">
+                  <td class="array1d"></td>
+               </tr>
+               <tr style="visibility:hidden;" class="noborder">
+                  <td></td>
+               </tr>
+            </tbody>
+         </table>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <table id="row4-7" class="table" style="width:3%;">
+            <tbody>
+               <tr style="visibility:hidden;">
+                  <td class="array1d"></td>
+               </tr>
+               <tr style="visibility:hidden;" class="noborder">
+                  <td></td>
+               </tr>
+            </tbody>
+         </table>
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <table id="row4-8" class="table" style="width:3%;">
+            <tbody>
+               <tr style="visibility:hidden;">
+                  <td class="array1d"></td>
+               </tr>
+               <tr style="visibility:hidden;" class="noborder">
+                  <td></td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+      <br></br>
+   </div>
+
+   <div align="center">
+      <!----controls-->
+      <p id="result"></p>
+      <button class="sort_button" onclick="play_asc()" id="sort"><span>Sort </span></button>
+      <br><br>
+      <input class="control_buttons refresh" type="button" value="refresh" id="refresh" onclick="refresh()"></input>
+      &nbsp;&nbsp;
+      <input class="control_buttons reset" type="button" value="reset" id="reset" onclick="reset()">&nbsp; &nbsp;
+      <br></br>
+      <p>NOTE: This visualization looks perfect when using desktop browser in maximized window.And this visualization is
+         not displayed correctly in firefox due to its internal bug which will replace html border color with background
+         color. </p>
+
+      <br></br>
+   </div>
+   <br></br>
+   <div align="center">
+      <p style="font-size:24px;color:yellow;">Explanation using an example:</p>
+      <ul type="none">
+         <li>Merge Sort is a Divide and Conquer algorithm. </li>
+         <li>It divides input array in two halves, calls itself for the two halves and then merges the two sorted
+            halves.</i>
+         <li>The merge() function is used for merging two halves. The merge(arr, l, m, r) is key process that assumes
+            that arr[l..m] and arr[m+1..r] are sorted and merges the two sorted sub-arrays into one.</li>
+      </ul>
+      <br>
+      <img type="svg" src="/assets/Merge_sort_algorithm_diagram.svg"></img>
+   </div>
+   <br></br><br></br>
+
+   <div class="container">
+      <p style="font-size:24px;color:yellow; margin-left:80px;">Merge Sort Code in C:</p>
+      <pre>
+                      <code style="color:white;">
+                           #include &lt;stdio.h&gt;
+
+                                 #define max 10
+                                 
+                                 int a[11] = { 10, 14, 19, 26, 27, 31, 33, 35, 42, 44, 0 };
+                                 int b[10];
+                                 
+                                 void merging(int low, int mid, int high) {
+                                    int l1, l2, i;
+                                 
+                                    for(l1 = low, l2 = mid + 1, i = low; l1 <= mid && l2 <= high; i++) {
+                                       if(a[l1] <= a[l2])
+                                          b[i] = a[l1++];
+                                       else
+                                          b[i] = a[l2++];
+                                    }
+                                    
+                                    while(l1 <= mid)    
+                                       b[i++] = a[l1++];
+                                 
+                                    while(l2 <= high)   
+                                       b[i++] = a[l2++];
+                                 
+                                    for(i = low; i <= high; i++)
+                                       a[i] = b[i];
+                                 }
+                                 
+                                 void sort(int low, int high) {
+                                    int mid;
+                                    
+                                    if(low < high) {
+                                       mid = (low + high) / 2;
+                                       sort(low, mid);
+                                       sort(mid+1, high);
+                                       merging(low, mid, high);
+                                    } else { 
+                                       return;
+                                    }   
+                                 }
+                                 
+                                 int main() { 
+                                    int i;
+                                 
+                                    printf("List before sorting\n");
+                                    
+                                    for(i = 0; i <= max; i++)
+                                       printf("%d ", a[i]);
+                                 
+                                    sort(0, max);
+                                 
+                                    printf("\nList after sorting\n");
+                                    
+                                    for(i = 0; i <= max; i++)
+                                       printf("%d ", a[i]);
+                                 }
+                      </code>
+                   </pre>
+   </div>
+
+</div>
