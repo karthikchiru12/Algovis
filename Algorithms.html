@@ -2,14 +2,14 @@
 <html>
     <head><title>AlgoVis : Algorithms</title>
             <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
         <link rel="icon" href="assets/favicon.ico">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
 
     </head>
-    <body>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <body onload="op1()">
+            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
                     <a class="navbar-brand" href="index.html">
                             <div class="svg-wrapper">
                                         <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
@@ -24,23 +24,30 @@
                   
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                           <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                           <a class="nav-link" href="Algorithms.html">Algorithms</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link " href="Community.html">Community</a>
+                          <a class="nav-link" href="Cheatsheets.html">Cheatsheets</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link " href="Datasets.html">Datasets<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link " href="About.html">About</a>
                         </li>
                       </ul>
-                      <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                      </form>
+
+                      <div> <span style="color: wheat;">Theme</span>&nbsp;
+                        <label class="switch">
+                          <input id="invert" onclick="" type="checkbox">
+                          <span class="slider round"></span>
+                        </label>
+                      </div>
+                      
                     </div>
                   </nav>
 
@@ -48,7 +55,7 @@
 <br>
 <br>
 
-        <div>
+        <div class="container-fluid">
             <div style="margin-left:5%; padding:10px;" style="display:flex;">
                 <h6 class="h6" style=" color:white;">Searching Algortihms</h6>
                 <ul type="none">
@@ -62,8 +69,8 @@
               <ul type="none">
               <li><a style="text-decoration:none; color:navajowhite; padding:10px;" href="BubbleSort.html">Bubble Sort</a></li>
               <li><a style="text-decoration:none; color:navajowhite; padding:10px;" href="OptimizedBubbleSort.html">Optimized Bubble Sort</a></li>
-              <li><a style="text-decoration:none; color:navajowhite; padding:10px;" href="MergeSort.html">Merge Sort</a></li> 
-              <li><a style="text-decoration:none; color:navajowhite; padding:10px;" href="InsertionSort.html">Insertion Sort</a></li> 
+              <li><a style="text-decoration:none; color:navajowhite; padding:10px;" href="MergeSort.html">Merge Sort</a></li>
+              <li><a style="text-decoration:none; color:navajowhite; padding:10px;" href="SelectionSort.html">Selection Sort</a></li>
             </ul>
          </div>
 
@@ -81,5 +88,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    </body>
+    <script src="js/misc.js"></script>  
+  </body>
 </html>

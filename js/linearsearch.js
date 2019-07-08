@@ -189,3 +189,13 @@ function refresh()
  }
 }
 //refresh function end...
+
+//pause function
+function pause()
+{
+    if(status=='pl')
+    {
+        confirm('Visualization Paused...Press OK or Cancel to Resume');
+    }
+}
+//pause function

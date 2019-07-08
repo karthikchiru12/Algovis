@@ -2,15 +2,15 @@
 <html>
     <head><title>AlgoVis : Home</title>
             <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <meta name="viewport" content="width=1024, initial-scale=1,user-scalable=yes">
         
         <link rel="icon" href="assets/favicon.ico">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
 
     </head>
-    <body>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <body onload="op1()">
+            <nav class="navbar navbar-expand-lg navbar-dark " style="background-color: black;">
                     <a class="navbar-brand" href="index.html">
                             <div class="svg-wrapper">
                                         <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
@@ -32,45 +32,43 @@
                           <a class="nav-link" href="Algorithms.html">Algorithms</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link " href="Community.html">Community</a>
+                          <a class="nav-link" href="Cheatsheets.html">Cheatsheets</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link " href="Datasets.html">Datasets<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link " href="About.html">About</a>
                         </li>
                       </ul>
-                      <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                      </form>
+
+                      <div> <span style="color: wheat;">Theme</span>&nbsp;
+                        <label class="switch">
+                          <input id="invert" onclick="" type="checkbox">
+                          <span class="slider round"></span>
+                        </label>
+                      </div>
+
                     </div>
                   </nav>
 
-                  <br><br><br>
+                  <br><br><br><br>
 
-                <h3 class="h3 line-1 anim-typewriter" style="text-align:center; color:white; font-family: 'Amaranth', sans-serif;">Learn Through simple visualiztions</h3>
-<br>
-<br>
-<p class="intro">
-Algovis, a simple way of learning algorithms through visualizations.<br>
-We at Algovis believe that every student, regardless of his learning capability<br>
-can easily grasp various things when they are visually taught.<br>
-We are presently working to create various visualizations.<br>
-We are trying to develop many other complex visualizations<br>
-And all of these visualizations would help other people to<br>
-develop their visualizations for their own algorithms.<br>
-And in future our plan is to develop a system that would visualize<br>
-a program when given as an input.<br>
-Thats all for now.!
+                <h3 class=" container h3 line-1 anim-typewriter" style="color:white; font-family: 'Amaranth', sans-serif;">Learn Through Visualizations  :)</h3>
+<br><br>
+
+<p class="container intro">Algovis, An Experiment To Visualize Various Algorithms Imitating The Conventional Classroom Teaching Approach. Visualizations Are Dynamic In A Way That Enables Any Novice Student To Understand The Algorithms Effectively. We also believe that a concept can be understood easily if it is presented in a way that looks appealing to read. So we came up with several handwritten cheatsheets which do the job. Our Goal is to make the learning more simple and exciting.
 </p>
 
 
-<div class="footnote">
-<p>Find the code at git repository : <a href="https://github.com/karthikchiru12/Algovis" style="text-decoration:none; color: red;">https://github.com/karthikchiru12/Algovis</a></p>
+<div class="container footnote">
+<p>Find the code at github repository : <a href="https://github.com/karthikchiru12/Algovis" style="text-decoration:none; color: aqua;">https://github.com/karthikchiru12/Algovis</a></p>
 </div>
 
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/misc.js"></script>
   </body>
 </html>

@@ -2,14 +2,14 @@
 <html>
     <head><title>AlgoVis : Linear_Search</title>
             <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+            <meta name="viewport" content="width=1024, initial-scale=1,user-scalable=no">
         <link rel="icon" href="assets/favicon.ico">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
 
     </head>
-    <body>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <body onload="op1()">
+            <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
                     <a class="navbar-brand" href="index.html">
                             <div class="svg-wrapper">
                                         <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
@@ -24,64 +24,72 @@
                   
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                           <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                           <a class="nav-link" href="Algorithms.html">Algorithms</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link " href="Community.html">Community</a>
+                          <a class="nav-link" href="Cheatsheets.html">Cheatsheets</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link " href="Datasets.html">Datasets<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link " href="About.html">About</a>
                         </li>
                       </ul>
-                      <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                      </form>
+
+                      <div> <span style="color: wheat;">Theme</span>&nbsp;
+                        <label class="switch">
+                          <input id="invert" onclick="" type="checkbox">
+                          <span class="slider round"></span>
+                        </label>
+                      </div>
+                      
                     </div>
-                  </nav><br><br>
+                  </nav><br>
 
-
+ <div class="container">
     <div id="anim">
-            <h3 class="h3" style="margin-left:5%;">Linear Search</h3><br>
-            <p class="p" style="margin-left: 5%">Linear search is a very basic and simple search algorithm.<br>In Linear search, we search an element or value in a given array by traversing the array from the starting,
+         <div >
+            <h3 class="h3">Linear Search :</h3>
+            <p class="p">Linear search is a very basic and simple search algorithm.<br>In Linear search, we search an element or value in a given array by traversing the array from the starting,
                 till the desired element or value is found.<br>
                 For example, consider an array of integers of size N
                 You should find and print the position of all the elements with value. 
                 Here, the linear search is based on the idea of matching each element from the beginning of the list to the end of the list with the integer 
-                and then printing the position of the element if the condition is `True'.</p><br><br>
-            <h4 class="h4" align="center" style="font-size:18px;">Linear Search Visualization</h4><br>
+                and then printing the position of the element if the condition is `True'.</p><br>
+            <h4 class="h4" align="center" style="font-size:18px;">Linear Search Visualization</h4>
 
             <div align="center">
-                    <table class="table array_1d" rules="all" id="array_1d" >
+                    <table class="table"  id="array_1d">
                     <tr>
-                    <th>A[0]</th>
-                    <th>A[1]</th>
-                    <th>A[2]</th>
-                    <th>A[3]</th>
-                    <th>A[4]</th>
-                    <th>A[5]</th>
-                    <th>A[6]</th>
-                    <th>A[7]</th>
-                    <th>A[8]</th>
-                    <th>A[9]</th>
-                    <th>A[10]</th>
+                    <th class="array1d">A[0]</th>
+                    <th class="array1d">A[1]</th>
+                    <th class="array1d">A[2]</th>
+                    <th class="array1d">A[3]</th>
+                    <th class="array1d">A[4]</th>
+                    <th class="array1d">A[5]</th>
+                    <th class="array1d">A[6]</th>
+                    <th class="array1d">A[7]</th>
+                    <th class="array1d">A[8]</th>
+                    <th class="array1d">A[9]</th>
+                    <th class="array1d">A[10]</th>
                     </tr>
-                    <tr>
-                    <td>0</td>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                    <td>10</td>
+                    <tr class="array_1d">
+                    <td class="array1d">0</td>
+                    <td class="array1d">1</td>
+                    <td class="array1d">2</td>
+                    <td class="array1d">3</td>
+                    <td class="array1d">4</td>
+                    <td class="array1d">5</td>
+                    <td class="array1d">6</td>
+                    <td class="array1d">7</td>
+                    <td class="array1d">8</td>
+                    <td class="array1d">9</td>
+                    <td class="array1d">10</td>
                     </tr>
                     <tr class="description">
                     <td></td>
@@ -108,16 +116,19 @@
                         <br><br>
                         <input class="control_buttons refresh" type="button" value="refresh" onclick="refresh()"></input> &nbsp;&nbsp;
                         <input class="control_buttons reset" type="button" value="reset" onclick="reset()"></input> &nbsp; &nbsp;
+                        <input class="control_buttons reset" type="button" value="pause" onclick="pause()"></input>
           
                 </div><br>
+             </div>
 
-                <div> <!----console-->
-                    <div id="details">
-                            <div id="console">
+                <div class="container"> <!----console-->
+                    <div class="row" id="details">
+                            <div class="column" id="console">
+                              <r></r>
                             <p id="log" style="color:white; font-family:Yanone Kaffeesatz;"></p><br>
                             <p id="output" style="color:yellow; font-family:Yanone Kaffeesatz;"></p>
                             </div>
-                            <div id="trace">
+                            <div class="column" id="trace">
                               <fieldset>
                                 <legend>Trace</legend>
                                 <ul type="none">
@@ -136,11 +147,52 @@
                  </div>
 
                 </div>
+            </div>
 
-    </div>
+
+                <br></br>
+
+                <div class="container">
+                  <p style="font-size:24px;color:orange; margin-left:80px;">Linear Search Code in C:</p>
+                   <pre>
+                      <code style="color:white;">
+                        #include &lt;stdio.h&gt;
+ 
+                          int main()
+                          {
+                            int array[100], search, c, n;
+                           
+                            printf("Enter number of elements in array\n");
+                            scanf("%d", &n);
+                           
+                            printf("Enter %d integer(s)\n", n);
+                           
+                            for (c = 0; c < n; c++)
+                              scanf("%d", &array[c]);
+                           
+                            printf("Enter a number to search\n");
+                            scanf("%d", &search);
+                           
+                            for (c = 0; c < n; c++)
+                            {
+                              if (array[c] == search)    /* If required element is found */
+                              {
+                                printf("%d is present at location %d.\n", search, c+1);
+                                break;
+                              }
+                            }
+                            if (c == n)
+                              printf("%d isn't present in the array.\n", search);
+                           
+                            return 0;
+                          }
+                      </code>
+                   </pre>
+                </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="js/linearsearch.js"></script>
+    <script src="js/misc.js"></script>
     </body>
 </html>
