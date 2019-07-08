@@ -15,19 +15,19 @@
   <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item">
-        <a class="nav-link" href="{{ site.baseurl }}/">Home<span class="sr-only">(current)</span></a>
+        <a class="nav-link {% if page.is_home %}active{% endif %}" href="{{ site.baseurl }}/">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ site.baseurl }}/algorithms">Algorithms</a>
+        <a class="nav-link {% if page.is_algorithms %}active{% endif %}" href="{{ site.baseurl }}/algorithms">Algorithms</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ site.baseurl }}/cheatsheets">Cheatsheets</a>
+        <a class="nav-link {% if page.cheatsheets %}active{% endif %}" href="{{ site.baseurl }}/cheatsheets">Cheatsheets</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="{{ site.baseurl }}/datasets">Datasets<span class="sr-only">(current)</span></a>
+        <a class="nav-link {% if page.is_datasets %}active{% endif %}" href="{{ site.baseurl }}/datasets">Datasets</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="{{ site.baseurl }}/about">About</a>
+        <a class="nav-link {% if page.is_about %}active{% endif %}" href="{{ site.baseurl }}/about">About</a>
       </li>
     </ul>
 
