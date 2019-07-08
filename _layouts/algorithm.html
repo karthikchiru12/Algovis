@@ -10,7 +10,7 @@
   {% include navigation.html %}
   {{ content }}
   {% include scripts.html %}
-  {% if page.algorithm %}<script src="/js/{{ page.algorithm }}.js"></script>{% endif %}
+  {% if page.algorithm %}<script src="{{ site.baseurl }}/js/{{ page.algorithm }}.js"></script>{% endif %}
 </body>
 
 </html>
