@@ -89,7 +89,7 @@ body{
 /*array styling*/
 
 
-/* refresh and reset control buttons styling*/
+/* refresh and reset control and other buttons styling*/
 .control_buttons
 {
 	  background-color:#bc122c;
@@ -104,7 +104,7 @@ body{
 .reset:hover{background-color:maroon;}
 .refresh:hover{background-color: maroon;}
 
-/* refresh and reset control buttons styling*/
+/* refresh and reset control and other buttons styling*/
 
 
 
@@ -506,3 +506,20 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 /*toggle css*/
+
+/*lbp css*/
+.imgpixel
+{
+  border: 1px solid white;
+}
+#pixels
+{
+  width: 20%;
+  text-align: center;
+}
+#output
+{
+  width :20%;
+  text-align: center;
+}
+/*lbp css*/

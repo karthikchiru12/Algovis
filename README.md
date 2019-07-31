@@ -17,6 +17,7 @@ Algorithm visualizations currently available: <br>
 6. Insertion sort (Under Development)
 7. Selection sort 
 8. K Means Clustering
+9. Local binary pattren (Under Development)
 
 You can download the code from this repository <br>
 Download the zip and extract it.<br>
@@ -38,7 +39,7 @@ You can see the visualizations at   https://chiranjeevikarthik.me/Algovis/
 #### Update:
 1. Several Cheatsheets for various subjects are added. (May 2019). <br>
 2. A new Dataset section is added. (Jun 2019).
-3. Jekyllified the site to make future builds easily.
+3. Jekyllified the site to make future builds easily by Sri Pravan Paturi.
 
 #### Screenshots :
 

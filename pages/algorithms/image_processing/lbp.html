@@ -1,0 +1,64 @@
+---
+layout: algorithm
+permalink: /algorithms/image_processing/lbp
+algorithm: lbp
+is_algorithms: true
+---
+<div class="container">
+  <div id="anim">
+      <h3 class="h3">Local Binary Pattren :</h3>
+      <p class="p">Imagine that a task is given to extract textures of a cat in an image. A texture can be typically how a particular object appears in an image. So we need a texture descriptor model to analyze various textures. Most of the models out there work on greyscale images rather than on colour images. This is because if we convert an image into greyscale, then we will have an NxN matrix containing the values of pixel intensities of that image. Then we can analyze the distribution of these features within the image. One of the texture descriptors is GLCM ( Gray-Level Co-occurrence Matrix). And GLCM gives a global representation of the texture. Unlike GLCM Local binary pattern computes a local representation of the texture, by comparing each pixel with its neighbouring pixels.</p><br>
+
+      <p class="p" style="color: bisque;">For example consider a 3x3 matrix out of a grayscale image pixel matrix. Click on Play...</p>
+      <br></br>
+      <div align="center">
+            <button class="control_buttons" id="play" onclick="play();">Play</button>
+            <br></br>
+            <table class="table" id="pixels" style="display:none;">
+                    <tr>
+                      <td class="imgpixel">5</td>
+                      <td class="imgpixel">8</td>
+                      <td class="imgpixel">1</td>
+                    </tr>
+                    <tr>
+                      <td class="imgpixel">5</td>
+                      <td class="imgpixel">4</td>
+                      <td class="imgpixel">1</td>
+                    </tr>
+                    <tr>
+                      <td class="imgpixel">3</td>
+                      <td class="imgpixel">7</td>
+                      <td class="imgpixel">2</td>
+                    </tr>
+                  </table>
+
+                  <br><br>
+
+            <p id="step" style="color: wheat; font-size:30px;"></p>
+            <br></br>
+            <table class="table" id="output" style="display:none;">
+                    <tr>
+                      <td class="imgpixel"></td>
+                      <td class="imgpixel"></td>
+                      <td class="imgpixel"></td>
+                    </tr>
+                    <tr>
+                      <td class="imgpixel"></td>
+                      <td class="imgpixel"></td>
+                      <td class="imgpixel"></td>
+                    </tr>
+                    <tr>
+                      <td class="imgpixel"></td>
+                      <td class="imgpixel"></td>
+                      <td class="imgpixel"></td>
+                    </tr>
+                  </table>
+                   
+      </div>
+
+          
+
+
+      
+</div>
+</div>
