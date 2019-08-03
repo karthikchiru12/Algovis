@@ -28,9 +28,9 @@ Feel free to experiment and change a line of code here and there and see what ch
 1. If the animation is stuck or not starting, then clear the cache of the browser and restart the browser.
 2. Even then if it does not work then try using a different browser.
 
-<h5>NOTE :</h5> <p><b> 
+<h5>NOTE :</h5> <p>
 
-1. All visualizations are tested in various browsers. All visualizations work perfectly except the merge sort in firefox browser due to its internal bug.</b></p> 
+1. All visualizations are tested in various browsers. All visualizations work perfectly except the merge sort in firefox browser due to its internal bug.</p> 
 2. K means clustering visualization was taken from here : https://github.com/hckr/k-means-visualization .
 
 
@@ -38,8 +38,8 @@ You can see the visualizations at   https://chiranjeevikarthik.me/Algovis/
 
 #### Update:
 1. Several Cheatsheets for various subjects are added. (May 2019). <br>
-2. A new Dataset section is added. (Jun 2019).
-3. Jekyllified the site to make future builds easily. Thanks to Sri Pravan Paturi.
+2. A new Dataset section is added. (June 2019).
+3. Jekyllified the site to make future builds easily and Thanks to Mr.Sri Pravan Paturi.(July 2019)
 
 #### Screenshots :
 

@@ -148,6 +148,9 @@ function play_asc()
         }
         if(step1=="enter")
         {
+
+		
+			
             
            step1="complete";
             

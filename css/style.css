@@ -522,4 +522,8 @@ input:checked + .slider:before {
   width :20%;
   text-align: center;
 }
+#oa
+{
+  width:20%;
+}
 /*lbp css*/
