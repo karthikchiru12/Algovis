@@ -17,7 +17,7 @@ Algorithm visualizations currently available: <br>
 6. Insertion sort (Under Development)
 7. Selection sort 
 8. K Means Clustering
-9. Local binary pattren (Under Development)
+9. Local binary pattren
 
 You can download the code from this repository <br>
 Download the zip and extract it.<br>
