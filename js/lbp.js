@@ -22,7 +22,7 @@ function play()
 
     var step3=setTimeout(function ()
     {
-        step.innerHTML="Selecting the center pixel in the above matrix";
+        step.innerHTML="Selecting a pixel in the above matrix";
         pixels.rows[1].cells[1].style.backgroundColor='maroon';
 
     },5000);
@@ -39,7 +39,7 @@ function play()
         pixels.rows[0].cells[0].style.backgroundColor='indigo';
         x=Number(pixels.rows[1].cells[1].innerHTML);
         y=Number(pixels.rows[0].cells[0].innerHTML);
-        step.innerHTML="Comparing (center) and (neihbouring pixel) values <br>If center - neighbouring_pixel >=0 then we keep '1' in output array<br> Otherwise '0'";
+        step.innerHTML="Comparing (selected pixel) and (neihbouring pixel) values <br>If selected_pixel - neighbouring_pixel >=0 then we keep '1' in output array<br> Otherwise '0'";
         output.style.display='table';
         output.rows[0].cells[0].innerHTML= (x-y>=0 ? 1 :0);
 
@@ -194,7 +194,7 @@ function play()
         output.style.display='table';
         output.rows[1].cells[1].innerHTML='23';
         output.style.borderColor='aqua';
-        step.innerHTML='And Construct a matrix same as size of Input matrix(3x3)<br>And replace the center value with the obtained decimal value<br>This is our obtained LBP Output image';
+        step.innerHTML='And Construct a matrix same as size of Input matrix(3x3)<br>And replace selected pixel value with the obtained decimal value<br>In the LBP Output image<br>And repeat this procedure for all the pixels in the input image pixel array';
     },47000);
 
     var step25=setTimeout(function ()
