@@ -107,7 +107,7 @@ function play()
     {
         pixels.rows[2].cells[2].style.backgroundColor='';
         step.style.color='aqua';
-        step.innerHTML="Now either clockwise or anti-clockwise<br>Push the values into a 2D Array";
+        step.innerHTML="Now either clockwise or anti-clockwise<br>Push the values into an Array";
         oa.style.display='table';
         
     },25000);
