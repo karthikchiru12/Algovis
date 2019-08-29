@@ -29,19 +29,20 @@ var status; //possible values={pl(play()),done(either element found or reset but
 var msg="";//used to display current key value to the user//
 var temp;//used as a temporary variable//
 var x;//extra//
-var i=0,j=0,curr=0,timer=1000,p=0,q=0;
+var i=0,j=1,curr=0,timer=1000,p=1,q=0;
 var n=11;
 var step1="enter";
 var step2="";
 var step3="";
+var stepad="";
 var s;
 var str;
 var finish=0;
 var swap_count=0;
 var sort=0;
-var a=[];
-var min=0;
-var min_index=0;
+var left=0,right=0;
+var ad=0;
+var temp_var=document.getElementById('temp_var');
 
 //reset function
 function reset()
@@ -91,7 +92,6 @@ function reset()
      document.getElementById('line4').style.backgroundColor='';
      document.getElementById('line6').style.backgroundColor='';
      document.getElementById('line8').style.backgroundColor='';
-     document.getElementById('line10').style.backgroundColor='';
      document.getElementById('sort').style.visibility='visible';
 	 
      status="";
@@ -139,22 +139,171 @@ function play_asc()
         
 
 
+        if(stepad=="oncemore")
+        {
+            stepad="";
+            i=0;
+            step1="enter";
+        }
+        
+        if(stepad=="complete")
+        {
+            arr.rows[r+1].cells[i].innerHTML="";
+            arr.rows[r].cells[j].innerHTML=Number(arr.rows[r].cells[i].innerHTML);
+            arr.rows[r].cells[i].innerHTML=temp;
+            arr.rows[r].cells[j].style.backgroundColor="";
+            j++;
+            arr.rows[r].cells[i].style.backgroundColor='';
+            stepad="oncemore";
+        }
+
+         if(stepad=="enter")
+        {       
+            arr.rows[r+1].cells[i].innerHTML=temp;
+            arr.rows[r+1].cells[j].innerHTML="";
+            stepad="complete";
+
+        }    
        
 
+
+        if(step1=="abort")
+        {
+            step1="enter";
+            arr.rows[r].cells[i].style.backgroundColor='';
+            i++;      
+        }
         if(step1=="complete")
         {       
-			
+            if(ad==1)
+            {
+                ad=0;
+                arr.rows[r].cells[j].innerHTML="";
+                arr.rows[r+1].cells[j].innerHTML=temp;
+                step1="";
+                stepad="enter";
+            }
+            else
+            {
+                step1="";
+                step2="enter";
+                
+            }
                 
         }
         if(step1=="enter")
         {
-
-		
-			
-            
-           step1="complete";
+            if(j>11)
+            {
+                clearInterval(id);
+            }
+            arr.rows[r].cells[j].style.backgroundColor='red';
+            arr.rows[r].cells[i].style.backgroundColor='gray';
+            left=Number(arr.rows[r].cells[i].innerHTML);
+            right=Number(arr.rows[r].cells[j].innerHTML);
+            if(left>right)
+            {
+               if(i+1==j)
+               {
+                    temp=Number(arr.rows[r].cells[j].innerHTML);
+                    ad=1;
+                    step1="complete";
+               }
+               else
+               {
+                   step1="complete";
+               }
+                    
+            }
+            else
+            {
+                if(i!=j)
+                {
+                 step1="abort";
+                }
+                else
+                {
+                    arr.rows[r].cells[i].style.backgroundColor='';
+                    i=0;j++;
+                }
+            }
             
         }
+
+
+        if(step2=="end")
+        {
+            i=0;
+            j++;
+            p=1;
+            step2="";
+            step1="enter";
+        }
+        if(step2=="oncemore")
+        {
+            if(i!=0)
+            {
+              p++;
+              q--;
+              step2="complete";
+            }
+            else
+            {
+                if(Number(temp_var.rows[r].cells[1])!=0)
+                {
+                    temp=Number(temp_var.rows[r].cells[1].innerHTML);
+                    arr.rows[r].cells[0].innerHTML=temp;
+                    temp_var.style.visibility='hidden';
+                    step2="end";
+                }
+            }
+        }
+        if(step2=="swap")
+        {
+            if(right>left)
+            {
+                arr.rows[r+1].cells[i].innerHTML='';
+                arr.rows[r].cells[q].innerHTML=right;
+                arr.rows[r].cells[i].innerHTML='';
+                arr.rows[r].cells[i].style.backgroundColor='';
+                step2="oncemore";
+
+            }
+            else
+            {
+                temp=Number(temp_var.rows[r].cells[1].innerHTML);
+                arr.rows[r].cells[i+1].innerHTML=temp;
+                temp_var.rows[r].cells[1].innerHTML="";
+                arr.rows[r].cells[i].style.backgroundColor='';
+                arr.rows[r+1].cells[i].innerHTML='';
+                temp_var.style.visibility='hidden';
+                step2="end";
+            }
+        }
+        if(step2=="complete")
+        {
+            i=j-p;
+            arr.rows[r].cells[i].style.backgroundColor='gray';
+            temp_var.rows[1].cells[1].style.backgroundColor='blue';
+            left=Number(temp_var.rows[1].cells[1].innerHTML);
+            right=Number(arr.rows[r].cells[i].innerHTML);
+            arr.rows[r+1].cells[i].innerHTML='&uarr;';
+            step2="swap";
+
+
+        }
+        if(step2=="enter")
+        {
+            q=j;
+            arr.rows[r].cells[i].style.backgroundColor='';
+            temp_var.style.visibility='visible';
+            temp_var.rows[1].cells[1].innerHTML=right;
+            arr.rows[r].cells[j].innerHTML="";
+            arr.rows[r].cells[j].style.backgroundColor='';
+            step2="complete";
+
+        }
+
 
         
         
@@ -169,7 +318,6 @@ function refresh()
  if((finish==0&&status!="pl")||(finish==1&&status=="done"))
  {
      
-     c=0;
      msg="";
      finish=0;
      step1="enter";
@@ -178,11 +326,7 @@ function refresh()
 	 swap_count=0;
 	 temp=0;
 	 sort=0;
-     a=0;
-     b=0;
      min=0;
-     min_index=0;
-     a=[];
      curr=0;
      p=0;
      q=0;
@@ -192,7 +336,6 @@ function refresh()
      document.getElementById('line4').style.backgroundColor='';
      document.getElementById('line6').style.backgroundColor='';
      document.getElementById('line8').style.backgroundColor='';
-     document.getElementById('line10').style.backgroundColor='';
      document.getElementById('sort').style.visibility='visible';
   for(var i=0;i<col_len;i++)
   {
