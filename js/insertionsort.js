@@ -52,7 +52,6 @@ function reset()
 	 /* The Limitation of the reset function is that it cannot be invoked while
 	    the anim() is running as it interferes with setInterval() and produces 
 		unexpected results*/
-     c=0;
      msg="";
      finish=0;
      step1="enter";
@@ -60,17 +59,15 @@ function reset()
 	 step3="";
 	 swap_count=0;
 	 temp=0;
-	 sort=0;
-     a=0;
-     b=0;
-     min=0;
-     min_index=0;
-     a=[];
+     sort=0;
+     left=0;
+     right=0;
+     i=0;j=1;
+     ad=0;
      curr=0;
-     p=0;
+     p=1;
      q=0;
-     document.getElementById('swap_count').innerHTML="";
-     document.getElementById('swap').innerHTML="";
+     document.getElementById('sort').style.visibility='visible';
      for(let p=0;p<11;p++)
      {
       arr.rows[1].cells[p].style.backgroundColor="";
@@ -88,11 +85,6 @@ function reset()
 	 arr.rows[r].cells[8].innerHTML="124";
 	 arr.rows[r].cells[9].innerHTML="46";
      arr.rows[1].cells[10].innerHTML="35";
-     
-     document.getElementById('line4').style.backgroundColor='';
-     document.getElementById('line6').style.backgroundColor='';
-     document.getElementById('line8').style.backgroundColor='';
-     document.getElementById('sort').style.visibility='visible';
 	 
      status="";
 	 if(s==true)
@@ -132,6 +124,7 @@ function play_asc()
             
             }
             status="pl";
+            document.getElementById('sort').style.visibility='hidden';
             
             
         
@@ -193,8 +186,12 @@ function play_asc()
         }
         if(step1=="enter")
         {
-            if(j>11)
+            if(j>10)
             {
+                sort=1;
+                status="done";
+                finish=1;
+                step1="";
                 clearInterval(id);
             }
             arr.rows[r].cells[j].style.backgroundColor='red';
@@ -326,16 +323,14 @@ function refresh()
 	 swap_count=0;
 	 temp=0;
 	 sort=0;
-     min=0;
      curr=0;
-     p=0;
+     p=1;
      q=0;
+     i=0;j=1;
+     ad=0;
+     left=0;
+     right=0;
      status="";
-     document.getElementById('swap').innerHTML="";
-     document.getElementById('swap_count').innerHTML="";
-     document.getElementById('line4').style.backgroundColor='';
-     document.getElementById('line6').style.backgroundColor='';
-     document.getElementById('line8').style.backgroundColor='';
      document.getElementById('sort').style.visibility='visible';
   for(var i=0;i<col_len;i++)
   {
