@@ -56,7 +56,7 @@ is_algorithms: true
 
 
     <div>
-      <table class="table" id="temp_var" style="visibility: hidden; width: 10%;">
+      <table class="table" id="temp_var" style="display:none; width: 10%;">
         <tr>
           <th class="temp_var">Variable</th>
           <th class="temp_var">Value</th>
@@ -88,23 +88,35 @@ is_algorithms: true
           <br>
           <br>
           <center>
-            <p id="swap" style="color:white; font-family:Yanone Kaffeesatz;"></p>
-            <p id="swap_count" style="color:yellow; font-family:Yanone Kaffeesatz;"></p>
-            <p id="comp" style="color:yellow; font-family:Yanone Kaffeesatz;"></p>
+            <p id="swap_count" style="color:yellow; font-family:Yanone Kaffeesatz; font-size :16px;">Best Case complexity :   O(n)</p>
+            <p id="comp" style="color:yellow; font-family:Yanone Kaffeesatz; font-size :16px;">Worst Case complexity :  O(n²)</p>
           </center>
         </div>
         <div class="column" id="trace">
           <fieldset>
             <legend>Trace</legend>
             <ul type="none">
-              <li id="line1">procedure bubble_sort (list)</li>
-              <li id="line2">&nbsp;for all elements in list</li>
-              <li id="line3"> &nbsp; &nbsp;if list[i] > list[i+1]</li>
-              <li id="line4"> &nbsp; &nbsp; &nbsp;&nbsp;swap(list[i], list[i+1])</li>
-              <li id="line5"> &nbsp;&nbsp;&nbsp;end if</li>
-              <li id="line6"> &nbsp;end for</li>
-              <li id="line7"> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return list</li>
-              <li id="line8">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;end BubbleSort</li>
+              <li id="line0">Procedure Insertion_sort(list)</li>
+              <li id="line1">&nbsp;&nbsp;i=0 , j=1</li>
+              <li id="line2">&nbsp;&nbsp;for all elements in list[n]</li>
+              <li id="line3"> &nbsp; &nbsp; &nbsp;&nbsp;if list[i] > list[j]</li>
+              <li id="line4"> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if  i+1 == j</li>
+              <li id="line5"> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swap(list[i],list[j])</li>
+              <li id="line6"> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else</li>
+              <li id="line7"> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;temp=list[j]</li>
+              <li id="line8"> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k=j</li>
+              <li id="line9"> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while true</li>
+              <li id="line10"> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if list[k] > temp</li>
+              <li id="line11"> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swap(list[k],list[k+1])</li>
+              <li id="line12"> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k--</li>
+              <li id="line13"> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else</li>
+              <li id="line14"> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list[k+1]=temp</li>
+              <li id="line15"> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;break</li>
+              <li id="line16"> &nbsp; &nbsp; &nbsp;&nbsp;else</li>
+              <li id="line17"> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++</li>
+              <li id="line18">&nbsp;&nbsp;i=0 , j++</li>
+              <li id="line19"> &nbsp;&nbsp;return list</li>
+              <li id="line20">end Insertion_Sort</li>
             </ul>
           </fieldset>
         </div>
