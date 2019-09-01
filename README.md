@@ -39,7 +39,7 @@ You can see the visualizations at   https://chiranjeevikarthik.me/Algovis/
 #### Update:
 1. Several Cheatsheets for various subjects are added. (May 2019). <br>
 2. A new Dataset section is added. (June 2019).
-3. Jekyllified the site to make future builds easily and Thanks to Mr.Sri Pravan Paturi.(July 2019)
+3. Jekyllified the site to make future builds easily. And Thanks to Mr.Sri Pravan Paturi.(July 2019)
 
 #### Screenshots :
 
