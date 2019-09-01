@@ -14,7 +14,7 @@ Algorithm visualizations currently available: <br>
 3. Bubble sort
 4. Optimized Bubble sort
 5. Merge sort 
-6. Insertion sort (Under Development)
+6. Insertion sort
 7. Selection sort 
 8. K Means Clustering
 9. Local binary pattren

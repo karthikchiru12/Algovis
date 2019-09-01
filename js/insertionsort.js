@@ -287,7 +287,7 @@ function play_asc()
                 {
                     temp=Number(temp_var.rows[r].cells[1].innerHTML);
                     arr.rows[r].cells[0].innerHTML=temp;
-                    temp_var.style.visibility='hidden';
+                    temp_var.style.display='none';
                     document.getElementById('line14').style.backgroundColor='red';
                     document.getElementById('line11').style.backgroundColor='';
                     step2="end";
